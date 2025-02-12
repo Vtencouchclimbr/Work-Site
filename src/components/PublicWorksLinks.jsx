@@ -38,6 +38,40 @@ const PublicWorksLinks = () => {
         <li><a href="https://www.payson.org/public-works" target="_blank" rel="noopener noreferrer">Payson Public Works</a></li>
       </ul>
 
+      <h2>Tooele County</h2>
+      <ul>
+        <li><a href="https://www.tooelecity.org/departments/public-works" target="_blank" rel="noopener noreferrer">Tooele City Public Works</a></li>
+        <li><a href="https://www.grantsvilleut.gov/departments/public-works" target="_blank" rel="noopener noreferrer">Grantsville Public Works</a></li>
+        <li><a href="https://www.wendovercityut.gov/public-works" target="_blank" rel="noopener noreferrer">Wendover Public Works</a></li>
+        <li><a href="https://www.tooelecounty.gov/departments/public-works" target="_blank" rel="noopener noreferrer">Tooele County Public Works (Unincorporated Areas)</a></li>
+      </ul>
+
+      <h2>Wasatch County</h2>
+      <ul>
+        <li><a href="https://www.heberut.gov/departments/public-works" target="_blank" rel="noopener noreferrer">Heber City Public Works</a></li>
+        <li><a href="https://www.midwaycityut.org/public-works" target="_blank" rel="noopener noreferrer">Midway Public Works</a></li>
+        <li><a href="https://www.wasatchcounty.gov/Public-Works" target="_blank" rel="noopener noreferrer">Wasatch County Public Works (Unincorporated Areas)</a></li>
+      </ul>
+
+      <h2>Summit County</h2>
+      <ul>
+        <li><a href="https://www.parkcity.org/departments/public-works" target="_blank" rel="noopener noreferrer">Park City Public Works</a></li>
+        <li><a href="https://www.kamas-ut.gov/public-works" target="_blank" rel="noopener noreferrer">Kamas Public Works</a></li>
+        <li><a href="https://www.summitcounty.org/156/Public-Works" target="_blank" rel="noopener noreferrer">Summit County Public Works (Unincorporated Areas)</a></li>
+      </ul>
+
+      <h2>Morgan County</h2>
+      <ul>
+        <li><a href="https://www.morgan-city.org/public-works" target="_blank" rel="noopener noreferrer">Morgan City Public Works</a></li>
+        <li><a href="https://www.morgan-county.net/public-works" target="_blank" rel="noopener noreferrer">Morgan County Public Works (Unincorporated Areas)</a></li>
+      </ul>
+
+      <h2>Juab County</h2>
+      <ul>
+        <li><a href="https://www.nephi.utah.gov/departments/public-works" target="_blank" rel="noopener noreferrer">Nephi Public Works</a></li>
+        <li><a href="https://www.juabcounty.gov/public-works" target="_blank" rel="noopener noreferrer">Juab County Public Works (Unincorporated Areas)</a></li>
+      </ul>
+
       <h2>Additional Resources</h2>
       <ul>
         <li><a href="https://www.rideuta.com" target="_blank" rel="noopener noreferrer">Utah Transit Authority (UTA)</a></li>
