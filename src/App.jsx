@@ -15,6 +15,7 @@ import './App.css'
 import Dictionary from './components/Dictionary';
 import Calculator from './components/Calculator';
 import PublicWorksLinks from './components/PublicWorksLinks';
+import TodoList from './components/TodoList';
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function App() {
           <Calculator />
           <Dictionary />
         </div>
+        <TodoList />
       </div>
     </div>
   )
