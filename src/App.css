@@ -32,6 +32,7 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
+  gap: 100px;
 }
 
 /* Optional: Adjust button styles if needed */

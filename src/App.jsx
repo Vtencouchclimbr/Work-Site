@@ -1,12 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faXTwitter,
-  faGithub,
   faYoutube
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faBrain,
-  faHandHoldingDollar
+  faRoad,
+  faPersonDigging
 } from "@fortawesome/free-solid-svg-icons";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -22,24 +21,19 @@ function App() {
     <div className="app-container">
       {/* Top bar for buttons */}
       <div className="d-flex justify-content-center top-buttons">
-        <a href="https://x.com/home" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.udot.utah.gov/connect/" target="_blank" rel="noopener noreferrer">
           <button type="button" className="btn btn-outline-secondary mx-3 my-2">
-            <FontAwesomeIcon icon={faXTwitter} size="3x" />
+            <FontAwesomeIcon icon={faRoad} size="3x" />
           </button>
         </a>
-        <a href="https://x.com/i/grok" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.bluestakes.org/" target="_blank" rel="noopener noreferrer">
+          <button type="button" className="btn btn-outline-secondary mx-3 my-2">
+            <FontAwesomeIcon icon={faPersonDigging} size="3x" />
+          </button>
+        </a>
+        <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">
           <button type="button" className="btn btn-outline-secondary mx-3 my-2">
             <FontAwesomeIcon icon={faBrain} size="3x" />
-          </button>
-        </a>
-        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-          <button type="button" className="btn btn-outline-secondary mx-3 my-2">
-            <FontAwesomeIcon icon={faGithub} size="3x" />
-          </button>
-        </a>
-        <a href="https://robinhood.com/" target="_blank" rel="noopener noreferrer">
-          <button type="button" className="btn btn-outline-secondary mx-3 my-2">
-            <FontAwesomeIcon icon={faHandHoldingDollar} size="3x" />
           </button>
         </a>
         <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
