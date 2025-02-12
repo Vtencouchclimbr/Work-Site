@@ -1,4 +1,46 @@
-.image {
-  background-color: rgb(41, 38, 38);
-  height: 100%;
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: rgb(54, 47, 47);
+}
+
+.top-buttons {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: rgb(54, 47, 47); /* Optional: for visibility */
+  padding: 10px 0;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 300px; /* Adjust width as needed */
+  padding: 20px;
+  overflow-y: auto; /* Allows scrolling if content is long */
+  border-right: 1px solid rgb(54, 83, 95); /* Optional: for visual separation */
+}
+
+.centered-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Optional: Adjust button styles if needed */
+.btn-outline-secondary {
+  border-color: #6c757d;
+  color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #6c757d;
+  color: white;
 }

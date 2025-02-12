@@ -15,13 +15,13 @@ import './App.css'
 
 import Dictionary from './components/Dictionary';
 import Calculator from './components/Calculator';
+import PublicWorksLinks from './components/PublicWorksLinks';
 
 function App() {
-
   return (
-    <div className="image">
+    <div className="app-container">
       {/* Top bar for buttons */}
-      <div className="d-flex justify-content-center">
+      <div className="d-flex justify-content-center top-buttons">
         <a href="https://x.com/home" target="_blank" rel="noopener noreferrer">
           <button type="button" className="btn btn-outline-secondary mx-3 my-2">
             <FontAwesomeIcon icon={faXTwitter} size="3x" />
@@ -49,14 +49,21 @@ function App() {
         </a>
       </div>
 
-      {/* Centered content */}
-      <div className="d-flex flex-column justify-content-center align-items-center min-vh-100">
-        <Calculator />
-        <Dictionary />
+      {/* Main content area */}
+      <div className="main-content">
+        {/* Left sidebar for PublicWorksLinks */}
+        <div className="sidebar">
+          <PublicWorksLinks />
+        </div>
+
+        {/* Centered content for Calculator and Dictionary */}
+        <div className="centered-content d-flex flex-column justify-content-center align-items-center">
+          <Calculator />
+          <Dictionary />
+        </div>
       </div>
     </div>
   )
 }
 
-export default App
-
+export default App;
