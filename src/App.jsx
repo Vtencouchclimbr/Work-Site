@@ -15,6 +15,7 @@ import './App.css'
 import Dictionary from './components/Dictionary';
 import Calculator from './components/Calculator';
 import PublicWorksLinks from './components/PublicWorksLinks';
+import CountyClerks from './components/CountyClerks';
 import TodoList from './components/TodoList';
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
         {/* Left sidebar for PublicWorksLinks */}
         <div className="sidebar">
           <PublicWorksLinks />
+          <CountyClerks />
         </div>
 
         {/* Centered content for Calculator and Dictionary */}
