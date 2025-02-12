@@ -6,7 +6,7 @@ const CountyClerks = () => {
       <h1>County Clerks for FrontRunner Areas</h1>
 
       <h2>Weber County</h2>
-      <div className="clerk-info">
+      <div className="clerk-info text-color">
         <p><strong>Clerk/Auditor:</strong> Ricky Hatch</p>
         <p><strong>Website:</strong> <a href="https://www.webercountyutah.gov/Clerk_Auditor" target="_blank" rel="noopener noreferrer">webercountyutah.gov/Clerk_Auditor</a></p>
         <p><strong>Phone:</strong> (801) 399-8400</p>
@@ -16,7 +16,7 @@ const CountyClerks = () => {
       </div>
 
       <h2>Davis County</h2>
-      <div className="clerk-info">
+      <div className="clerk-info text-color">
         <p><strong>Clerk/Auditor:</strong> Curtis Koch</p>
         <p><strong>Website:</strong> <a href="https://www.daviscountyutah.gov/clerk" target="_blank" rel="noopener noreferrer">daviscountyutah.gov/clerk</a></p>
         <p><strong>Phone:</strong> (801) 451-3213</p>
@@ -26,7 +26,7 @@ const CountyClerks = () => {
       </div>
 
       <h2>Salt Lake County</h2>
-      <div className="clerk-info">
+      <div className="clerk-info text-color">
         <p><strong>Clerk:</strong> Lannie Chapman (Interim)</p>
         <p><strong>Website:</strong> <a href="https://www.slco.org/clerk" target="_blank" rel="noopener noreferrer">slco.org/clerk</a></p>
         <p><strong>Phone:</strong> (385) 468-7300</p>
@@ -36,7 +36,7 @@ const CountyClerks = () => {
       </div>
 
       <h2>Utah County</h2>
-      <div className="clerk-info">
+      <div className="clerk-info text-color">
         <p><strong>Clerk/Auditor:</strong> Aaron Davidson</p>
         <p><strong>Website:</strong> <a href="https://www.utahcounty.gov/Dept/ClerkAud" target="_blank" rel="noopener noreferrer">utahcounty.gov/Dept/ClerkAud</a></p>
         <p><strong>Phone:</strong> (801) 851-8109</p>
