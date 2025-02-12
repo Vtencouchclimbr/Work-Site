@@ -54,7 +54,7 @@ function App() {
         </div>
 
         {/* Centered content for Calculator and Dictionary */}
-        <div className="centered-content d-flex flex-column justify-content-center align-items-center">
+        <div className="centered-content d-flex flex-column mt-5">
           <Calculator />
           <Dictionary />
         </div>
