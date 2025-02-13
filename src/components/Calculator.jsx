@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Calculator.css';
 
 const Calculator = () => {
@@ -73,8 +73,48 @@ const Calculator = () => {
     }
   };
 
+  // Handle keyboard input
+  const handleKeyPress = (event) => {
+    const { key } = event;
+
+    // Numbers (0-9)
+    if (/[0-9]/.test(key)) {
+      handleNumber(parseInt(key, 10));
+    }
+    // Operators
+    else if (key === '+') {
+      handleOperator('+');
+    } else if (key === '-') {
+      handleOperator('-');
+    } else if (key === '*') {
+      handleOperator('×');
+    } else if (key === '/') {
+      handleOperator('÷');
+    }
+    // Decimal point
+    else if (key === '.') {
+      handleDecimal();
+    }
+    // Equals
+    else if (key === '=' || key === 'Enter') {
+      handleEqual();
+    }
+    // Clear (Escape or Backspace)
+    else if (key === 'Escape' || key === 'Backspace') {
+      handleClear();
+    }
+  };
+
+  // Add keyboard event listener
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyPress);
+    return () => {
+      window.removeEventListener('keydown', handleKeyPress);
+    };
+  }, [display, operator, previousValue, waitingForOperand]); // Dependencies to ensure state updates are reflected
+
   return (
-    <div className="calculator">
+    <div className="calculator" tabIndex={0}> {/* Add tabIndex for focus */}
       <div className="display">{display}</div>
       <div className="buttons">
         <button className="button clear" onClick={handleClear}>C</button>
