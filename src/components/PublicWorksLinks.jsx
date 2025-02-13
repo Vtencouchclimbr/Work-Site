@@ -30,44 +30,46 @@ const PublicWorksLinks = () => {
         <li><a href="https://www.pricecityutah.com/public-works" target="_blank" rel="noopener noreferrer">Price City Public Works</a></li>
         <li><a href="https://wellingtonutah.us/public-works.html" target="_blank" rel="noopener noreferrer">Wellington Public Works</a></li>
       </ul>
-{/*  */}
+
       <h2>Daggett County</h2>
       <ul>
-        <li><a href="https://www.daggettcounty.org/public-works" target="_blank" rel="noopener noreferrer">Daggett County Public Works (Unincorporated Areas)</a></li>
+        <li><a href="https://www.daggettcounty.org/17/Road-Department" target="_blank" rel="noopener noreferrer">Daggett County Public Works</a></li>
+        <li><a href="https://manilautah.com/" target="_blank" rel="noopener noreferrer">Manila Public Works</a></li>
       </ul>
 
       <h2>Davis County</h2>
       <ul>
         <li><a href="https://www.laytoncity.org/LC/PublicWorks" target="_blank" rel="noopener noreferrer">Layton Public Works</a></li>
-        <li><a href="https://www.farmington.utah.gov/156/Public-Works" target="_blank" rel="noopener noreferrer">Farmington Public Works</a></li>
-        <li><a href="https://www.woodscross.com/156/Public-Works" target="_blank" rel="noopener noreferrer">Woods Cross Public Works</a></li>
-        <li><a href="https://www.daviscountyutah.gov/public-works" target="_blank" rel="noopener noreferrer">Davis County Public Works (Unincorporated Areas)</a></li>
+        <li><a href="https://farmington.utah.gov/departments/public-works-2/" target="_blank" rel="noopener noreferrer">Farmington Public Works</a></li>
+        <li><a href="https://www.woodscross.com/publicworks" target="_blank" rel="noopener noreferrer">Woods Cross Public Works</a></li>
+        <li><a href="https://www.bountifulutah.gov/Engineering" target="_blank" rel="noopener noreferrer">Bountiful Public Works</a></li>
       </ul>
 
       <h2>Duchesne County</h2>
       <ul>
-        <li><a href="https://www.rooseveltcity.com/public-works" target="_blank" rel="noopener noreferrer">Roosevelt Public Works</a></li>
-        <li><a href="https://www.duchesne.utah.gov/public-works" target="_blank" rel="noopener noreferrer">Duchesne County Public Works (Unincorporated Areas)</a></li>
+        <li><a href="https://www.rooseveltcity.com/157/Public-Works-Water" target="_blank" rel="noopener noreferrer">Roosevelt Public Works</a></li>
+        <li><a href="https://www.duchesnecity.com/services/public_works/index.php" target="_blank" rel="noopener noreferrer">Duchesne County Public Works</a></li>
+        <li><a href="https://www.mytoncityut.gov/" target="_blank" rel="noopener noreferrer">Myton Public Works</a></li>
       </ul>
 
       <h2>Emery County</h2>
       <ul>
-        <li><a href="https://www.castledale.utah.gov/public-works" target="_blank" rel="noopener noreferrer">Castle Dale Public Works</a></li>
-        <li><a href="https://www.emerycounty.com/public-works" target="_blank" rel="noopener noreferrer">Emery County Public Works (Unincorporated Areas)</a></li>
+        <li><a href="https://emery.utah.gov/home/department-directory/road/" target="_blank" rel="noopener noreferrer">Emery Public Works</a></li>
+        <li><a href="https://www.huntingtonut.com/services.html" target="_blank" rel="noopener noreferrer">Huntington Public Works</a></li>
+        <li><a href="https://www.ferroncity.org/city-government.htm" target="_blank" rel="noopener noreferrer">Ferron City Public Works</a></li>
       </ul>
 
       <h2>Garfield County</h2>
       <ul>
-        <li><a href="https://www.panguitch.com/public-works" target="_blank" rel="noopener noreferrer">Panguitch Public Works</a></li>
-        <li><a href="https://www.garfield.utah.gov/public-works" target="_blank" rel="noopener noreferrer">Garfield County Public Works (Unincorporated Areas)</a></li>
+        <li><a href="https://www.garfield.utah.gov/departments/public-works" target="_blank" rel="noopener noreferrer">Garfield County Public Works</a></li>
+        <li><a href="https://panguitch.com/city-hall-directory/" target="_blank" rel="noopener noreferrer">Panguitch Public Works</a></li>
       </ul>
 
       <h2>Grand County</h2>
       <ul>
-        <li><a href="https://www.moabcity.org/public-works" target="_blank" rel="noopener noreferrer">Moab Public Works</a></li>
-        <li><a href="https://www.grandcountyutah.net/public-works" target="_blank" rel="noopener noreferrer">Grand County Public Works (Unincorporated Areas)</a></li>
+        <li><a href="https://moabcity.org/166/Public-Works" target="_blank" rel="noopener noreferrer">Moab Public Works</a></li>
       </ul>
-
+{/*  */}
       <h2>Iron County</h2>
       <ul>
         <li><a href="https://www.cedarcity.org/public-works" target="_blank" rel="noopener noreferrer">Cedar City Public Works</a></li>
