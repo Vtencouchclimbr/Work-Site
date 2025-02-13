@@ -20,10 +20,13 @@
 
 .sidebar {
   display: flex;
-  width: 600px; /* Adjust width as needed */
+  width: 600px;
+  height: 800px;
   padding: 20px;
-  overflow-y: auto; /* Allows scrolling if content is long */
-  border-right: 1px solid rgb(54, 83, 95); /* Optional: for visual separation */
+  overflow-x: auto;
+  border-right: 1px solid rgb(54, 83, 95);
+  scrollbar-color: #6c757d #343a40;
+  scrollbar-width: thin;
 }
 
 .centered-content {
@@ -34,7 +37,6 @@
   gap: 100px;
 }
 
-/* Optional: Adjust button styles if needed */
 .btn-outline-secondary {
   border-color: #6c757d;
   color: #6c757d;
