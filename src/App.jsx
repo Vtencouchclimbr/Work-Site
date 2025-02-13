@@ -35,12 +35,6 @@ function App() {
               <FontAwesomeIcon icon={faRoad} size="3x" className="d-none d-md-block" />
             </button>
           </a>
-          <a href="https://www.bluestakes.org/" target="_blank" rel="noopener noreferrer" className="m-2">
-            <button type="button" className="btn btn-outline-secondary">
-              <FontAwesomeIcon icon={faPersonDigging} size="lg" className="d-block d-md-none" />
-              <FontAwesomeIcon icon={faPersonDigging} size="3x" className="d-none d-md-block" />
-            </button>
-          </a>
           <a href="https://www.asce.org/publications-and-news/civil-engineering-source/society-news/article/2022/07/newly-updated-asce-38-22-utility-engineering-standard-and-new-companion-standard-asce-75-22-now-available" target="_blank" rel="noopener noreferrer" className="m-2">
             <button type="button" className="btn btn-outline-secondary">
               ACSE<br />
@@ -71,17 +65,23 @@ function App() {
               <FontAwesomeIcon icon={faMapLocationDot} size="3x" className="d-none d-md-block" />
             </button>
           </a>
+          <a href="https://www.bluestakes.org/" target="_blank" rel="noopener noreferrer" className="m-2">
+            <button type="button" className="btn btn-outline-secondary">
+              <FontAwesomeIcon icon={faPersonDigging} size="lg" className="d-block d-md-none" />
+              <FontAwesomeIcon icon={faPersonDigging} size="3x" className="d-none d-md-block" />
+            </button>
+          </a>
           <div className="ms-5 mt-3">
             <Clock />
           </div>
         </div>
       </div>
-        {/* Aside for Clock and TodoList (fixed on larger screens) */}
-        <aside className="aside col-12 col-md-3 d-flex flex-column mb-4 mb-md-0">
-          <div className="mb-4">
-            <TodoList />
-          </div>
-        </aside>
+      {/* Aside for Clock and TodoList (fixed on larger screens) */}
+      <aside className="aside col-12 col-md-3 d-flex flex-column mb-4 mb-md-0 order-md-last">
+        <div className="mb-4">
+          <TodoList />
+        </div>
+      </aside>
       {/* Main content area */}
       <div className="main-content d-flex flex-column flex-md-row mt-4">
         {/* Sidebar for PublicWorksLinks and CountyClerks */}
@@ -99,8 +99,6 @@ function App() {
             <Dictionary />
           </div>
         </div>
-
-        
       </div>
     </div>
   );
