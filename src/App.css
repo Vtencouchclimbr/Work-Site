@@ -3,43 +3,55 @@
   flex-direction: column;
   min-height: 100vh;
   background-color: rgb(54, 47, 47);
+  padding: 1rem; /* Mobile padding */
 }
 
 .top-buttons {
   position: sticky;
   top: 0;
   z-index: 10;
-  background-color: rgb(54, 47, 47); /* Optional: for visibility */
-  padding: 10px 0;
+  background-color: rgb(54, 47, 47);
+  padding: 0.5rem 0; /* Reduced padding for mobile */
+  text-align: center; /* Center content on mobile */
 }
 
 .main-content {
   display: flex;
+  flex-direction: column; /* Stack vertically on mobile */
   flex: 1;
 }
 
 .sidebar {
   display: flex;
-  width: 600px;
-  height: 800px;
-  padding: 20px;
+  flex-direction: column; /* Stack content vertically on mobile */
+  width: 100%; /* Full width on mobile */
+  padding: 1rem; /* Reduced padding for mobile */
   overflow-x: auto;
-  border-right: 1px solid rgb(54, 83, 95);
   scrollbar-color: #6c757d #343a40;
   scrollbar-width: thin;
+  border-right: none; /* Remove border on mobile */
+  border-bottom: 1px solid rgb(54, 83, 95); /* Add bottom border for separation */
 }
 
 .centered-content {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  gap: 100px;
+  padding: 1rem; /* Reduced padding for mobile */
+  gap: 2rem; /* Reduced gap for mobile */
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Full width on mobile */
+  padding: 1rem; /* Reduced padding for mobile */
 }
 
 .btn-outline-secondary {
   border-color: #6c757d;
   color: #6c757d;
+  padding: 0.5rem; /* Reduced padding for mobile */
 }
 
 .btn-outline-secondary:hover {
@@ -47,3 +59,45 @@
   color: white;
 }
 
+/* Media query for larger screens (md and up, 768px) */
+@media (min-width: 768px) {
+  .app-container {
+    padding: 2rem; /* Increased padding for larger screens */
+  }
+
+  .top-buttons {
+    padding: 10px 0; /* Original padding for larger screens */
+  }
+
+  .main-content {
+    flex-direction: row; /* Horizontal layout for larger screens */
+  }
+
+  .sidebar {
+    flex-direction: row; /* Original layout for larger screens */
+    width: 600px; /* Original width for larger screens */
+    height: 800px; /* Original height for larger screens */
+    padding: 20px; /* Original padding for larger screens */
+    border-right: 1px solid rgb(54, 83, 95); /* Original border for larger screens */
+    border-bottom: none; /* Remove mobile bottom border */
+  }
+
+  .centered-content {
+    padding: 20px; /* Original padding for larger screens */
+    gap: 100px; /* Original gap for larger screens */
+  }
+
+  .aside {
+    position: fixed;
+    top: 100px; /* Adjust based on top-buttons height */
+    right: 2rem; /* Align to the right with padding */
+    width: 400px; /* Fixed width for aside on larger screens */
+    padding: 20px; /* Original padding for larger screens */
+    height: calc(100vh - 120px); /* Adjust height to fit viewport */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+  }
+
+  .btn-outline-secondary {
+    padding: 0.75rem; /* Slightly larger padding for larger screens */
+  }
+}

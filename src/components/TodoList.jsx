@@ -42,6 +42,13 @@ const TodoList = () => {
     setNewTask(e.target.value);
   };
 
+  // Handle Enter key press to add task
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleAddTask();
+    }
+  };
+
   return (
     <div className="todo-list">
       <h2>To-Do List</h2>
@@ -50,6 +57,7 @@ const TodoList = () => {
           type="text"
           value={newTask}
           onChange={handleInputChange}
+          onKeyDown={handleKeyPress} 
           placeholder="Add a new task"
         />
         <button onClick={handleAddTask}>Add</button>
