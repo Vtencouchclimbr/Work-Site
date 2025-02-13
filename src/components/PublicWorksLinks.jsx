@@ -69,132 +69,145 @@ const PublicWorksLinks = () => {
       <ul>
         <li><a href="https://moabcity.org/166/Public-Works" target="_blank" rel="noopener noreferrer">Moab Public Works</a></li>
       </ul>
-{/*  */}
+
       <h2>Iron County</h2>
       <ul>
-        <li><a href="https://www.cedarcity.org/public-works" target="_blank" rel="noopener noreferrer">Cedar City Public Works</a></li>
-        <li><a href="https://www.ironcounty.net/departments/public-works" target="_blank" rel="noopener noreferrer">Iron County Public Works (Unincorporated Areas)</a></li>
+        <li><a href="https://www.cedarcityut.gov/77/Public-Works" target="_blank" rel="noopener noreferrer">Cedar City Public Works</a></li>
+        <li><a href="https://www.parowan.org/publicworks" target="_blank" rel="noopener noreferrer">Parowan City Public Works</a></li>
+        <li><a href="https://www.cityofenoch.org/" target="_blank" rel="noopener noreferrer">Enoch City Public Works</a></li>
+        <li><a href="https://ironcounty.net/" target="_blank" rel="noopener noreferrer">Iron County Public Works</a></li>
       </ul>
 
       <h2>Juab County</h2>
       <ul>
-        <li><a href="https://www.nephi.utah.gov/departments/public-works" target="_blank" rel="noopener noreferrer">Nephi Public Works</a></li>
-        <li><a href="https://www.juabcounty.gov/public-works" target="_blank" rel="noopener noreferrer">Juab County Public Works (Unincorporated Areas)</a></li>
+        <li><a href="https://www.nephi.utah.gov/295/Public-Works" target="_blank" rel="noopener noreferrer">Nephi Public Works</a></li>
+        <li><a href="https://www.monautah.gov/#" target="_blank" rel="noopener noreferrer">Mona City</a></li>
+        <li><a href="https://levantown.org/utilities/" target="_blank" rel="noopener noreferrer">Levan Town</a></li>
+        <li><a href="https://juabcounty.gov/" target="_blank" rel="noopener noreferrer">Juab County Public</a></li>
       </ul>
 
       <h2>Kane County</h2>
       <ul>
-        <li><a href="https://www.kanab.utah.gov/public-works" target="_blank" rel="noopener noreferrer">Kanab Public Works</a></li>
-        <li><a href="https://www.kane.utah.gov/public-works" target="_blank" rel="noopener noreferrer">Kane County Public Works (Unincorporated Areas)</a></li>
+        <li><a href="https://kanab.utah.gov/2164/Public-Works" target="_blank" rel="noopener noreferrer">Kanab Public Works</a></li>
+        <li><a href="https://www.townoforderville.com/" target="_blank" rel="noopener noreferrer">Orderville Town</a></li>
+        <li><a href="https://www.kane.utah.gov/157/Departments" target="_blank" rel="noopener noreferrer">Kane County</a></li>
       </ul>
 
       <h2>Millard County</h2>
       <ul>
-        <li><a href="https://www.delta.utah.gov/public-works" target="_blank" rel="noopener noreferrer">Delta Public Works</a></li>
-        <li><a href="https://www.millardcounty.org/public-works" target="_blank" rel="noopener noreferrer">Millard County Public Works (Unincorporated Areas)</a></li>
+        <li><a href="https://www.delta.utah.gov/publicworks" target="_blank" rel="noopener noreferrer">Delta Public Works</a></li>
+        <li><a href="https://fillmorecity.org/utilities/" target="_blank" rel="noopener noreferrer">Fillmore Public Works</a></li>
+        <li><a href="https://millardcounty.gov/your-government/county-departments/road-department/" target="_blank" rel="noopener noreferrer">Millard County Roads</a></li>
       </ul>
 
       <h2>Morgan County</h2>
       <ul>
-        <li><a href="https://www.morgan-city.org/public-works" target="_blank" rel="noopener noreferrer">Morgan City Public Works</a></li>
-        <li><a href="https://www.morgan-county.net/public-works" target="_blank" rel="noopener noreferrer">Morgan County Public Works (Unincorporated Areas)</a></li>
+        <li><a href="https://www.morgancountyutah.gov/public-services" target="_blank" rel="noopener noreferrer">Morgan City Public Works</a></li>
       </ul>
 
       <h2>Piute County</h2>
       <ul>
-        <li><a href="https://www.piutecounty.org/public-works" target="_blank" rel="noopener noreferrer">Piute County Public Works (Unincorporated Areas)</a></li>
+        <li><a href="https://www.piuteutah.com/your-government/county-departments/road-department/" target="_blank" rel="noopener noreferrer">Piute County Roads</a></li>
+        <li><a href="https://www.utah.gov/pmn/sitemap/publicbody/2746.html" target="_blank" rel="noopener noreferrer">Junction Town</a></li>
+        <li><a href="https://circlevilleutah.org/departments/" target="_blank" rel="noopener noreferrer">Circleville Public Works</a></li>
       </ul>
 
       <h2>Rich County</h2>
       <ul>
-        <li><a href="https://www.garden-city.utah.gov/public-works" target="_blank" rel="noopener noreferrer">Garden City Public Works</a></li>
-        <li><a href="https://www.richcountyut.org/public-works" target="_blank" rel="noopener noreferrer">Rich County Public Works (Unincorporated Areas)</a></li>
+        <li><a href="https://www.gardencityutah.gov/public-works" target="_blank" rel="noopener noreferrer">Garden City Public Works</a></li>
+        <li><a href="http://www.townofrandolph.org/" target="_blank" rel="noopener noreferrer">Randolph Town</a></li>
       </ul>
 
       <h2>Salt Lake County</h2>
       <ul>
-        <li><a href="https://www.slc.gov/publicservices" target="_blank" rel="noopener noreferrer">Salt Lake City Public Services</a></li>
-        <li><a href="https://www.murray.utah.gov/156/Public-Works" target="_blank" rel="noopener noreferrer">Murray Public Works</a></li>
-        <li><a href="https://www.sjc.utah.gov/156/Public-Works" target="_blank" rel="noopener noreferrer">South Jordan Public Works</a></li>
-        <li><a href="https://www.draperutah.gov/156/Public-Works" target="_blank" rel="noopener noreferrer">Draper Public Works</a></li>
-        <li><a href="https://www.slco.org/public-works" target="_blank" rel="noopener noreferrer">Salt Lake County Public Works (Unincorporated Areas)</a></li>
+        <li><a href="https://www.slc.gov/utilities/" target="_blank" rel="noopener noreferrer">Salt Lake City Public Utilities</a></li>
+        <li><a href="https://www.murray.utah.gov/210/Public-Works" target="_blank" rel="noopener noreferrer">Murray Public Works</a></li>
+        <li><a href="https://www.sjc.utah.gov/286/Public-Works" target="_blank" rel="noopener noreferrer">South Jordan Public Works</a></li>
+        <li><a href="https://www.draperutah.gov/living-in-draper-city/utilities/" target="_blank" rel="noopener noreferrer">Draper Public Works</a></li>
+        <li><a href="https://www.saltlakecounty.gov/public-works/" target="_blank" rel="noopener noreferrer">Salt Lake County Public Works</a></li>
       </ul>
 
       <h2>San Juan County</h2>
       <ul>
-        <li><a href="https://www.blanding-ut.gov/public-works" target="_blank" rel="noopener noreferrer">Blanding Public Works</a></li>
-        <li><a href="https://www.sanjuancounty.org/public-works" target="_blank" rel="noopener noreferrer">San Juan County Public Works (Unincorporated Areas)</a></li>
+        <li><a href="https://www.blanding-ut.gov/publicworks" target="_blank" rel="noopener noreferrer">Blanding Public Works</a></li>
+        <li><a href="https://www.monticelloutah.org/departments/PublicWorks#:~:text=If%20you%20need%20to%20report,reach%20out%20directly%20to%20us." target="_blank" rel="noopener noreferrer">Monticello Public Works</a></li>
+        <li><a href="https://sanjuancountyut.gov/publicworks" target="_blank" rel="noopener noreferrer">San Juan County Public Works</a></li>
       </ul>
 
       <h2>Sanpete County</h2>
       <ul>
-        <li><a href="https://www.manti.utah.gov/public-works" target="_blank" rel="noopener noreferrer">Manti Public Works</a></li>
-        <li><a href="https://www.sanpete.com/public-works" target="_blank" rel="noopener noreferrer">Sanpete County Public Works (Unincorporated Areas)</a></li>
+        <li><a href="https://www.manti.gov/publicworks" target="_blank" rel="noopener noreferrer">Manti Public Works</a></li>
+        <li><a href="https://www.ephraim.gov/160/Public-Works" target="_blank" rel="noopener noreferrer">Ephraim Public Works</a></li>
+        <li><a href="https://www.mpcityut.gov/services/utilities/index.php" target="_blank" rel="noopener noreferrer">Mount Pleasant Public Works</a></li>
+        <li><a href="https://www.sanpete.com/" target="_blank" rel="noopener noreferrer">Sanpete County</a></li>
       </ul>
 
       <h2>Sevier County</h2>
       <ul>
-        <li><a href="https://www.richfieldcity.com/public-works" target="_blank" rel="noopener noreferrer">Richfield Public Works</a></li>
-        <li><a href="https://www.sevierutah.net/public-works" target="_blank" rel="noopener noreferrer">Sevier County Public Works (Unincorporated Areas)</a></li>
+        <li><a href="https://richfieldcity.com/contacts/" target="_blank" rel="noopener noreferrer">Richfield Public Works</a></li>
+        <li><a href="https://www.salina.utah.gov/" target="_blank" rel="noopener noreferrer">Salina City</a></li>
+        <li><a href="https://sevieredc.com/utilities/" target="_blank" rel="noopener noreferrer">Sevier County Utilities</a></li>
       </ul>
 
       <h2>Summit County</h2>
       <ul>
         <li><a href="https://www.parkcity.org/departments/public-works" target="_blank" rel="noopener noreferrer">Park City Public Works</a></li>
-        <li><a href="https://www.kamas-ut.gov/public-works" target="_blank" rel="noopener noreferrer">Kamas Public Works</a></li>
-        <li><a href="https://www.summitcounty.org/156/Public-Works" target="_blank" rel="noopener noreferrer">Summit County Public Works (Unincorporated Areas)</a></li>
+        <li><a href="https://www.kamascityut.gov/" target="_blank" rel="noopener noreferrer">Kamas City</a></li>
+        <li><a href="https://www.coalvillecity.gov/public-works" target="_blank" rel="noopener noreferrer">Coalville Public Works</a></li>
+        <li><a href="https://summitcountyutah.gov/publicworks" target="_blank" rel="noopener noreferrer">Summit County Public Works (Unincorporated Areas)</a></li>
       </ul>
 
       <h2>Tooele County</h2>
       <ul>
-        <li><a href="https://www.tooelecity.org/departments/public-works" target="_blank" rel="noopener noreferrer">Tooele City Public Works</a></li>
-        <li><a href="https://www.grantsvilleut.gov/departments/public-works" target="_blank" rel="noopener noreferrer">Grantsville Public Works</a></li>
-        <li><a href="https://www.wendovercityut.gov/public-works" target="_blank" rel="noopener noreferrer">Wendover Public Works</a></li>
-        <li><a href="https://www.tooelecounty.gov/departments/public-works" target="_blank" rel="noopener noreferrer">Tooele County Public Works (Unincorporated Areas)</a></li>
+        <li><a href="https://www.tooelecity.gov/services/public_works/index.php" target="_blank" rel="noopener noreferrer">Tooele City Public Works</a></li>
+        <li><a href="https://www.grantsvilleut.gov/departments/public_works/index.php" target="_blank" rel="noopener noreferrer">Grantsville Public Works</a></li>
+        <li><a href="https://www.westwendovercity.com/services/general-city-services/public-works-utilities" target="_blank" rel="noopener noreferrer">Wendover Public Works</a></li>
+        <li><a href="https://tooeleco.gov/departments/public_works/index.php" target="_blank" rel="noopener noreferrer">Tooele County Public Works</a></li>
       </ul>
 
       <h2>Uintah County</h2>
       <ul>
-        <li><a href="https://www.vernalcity.org/public-works" target="_blank" rel="noopener noreferrer">Vernal Public Works</a></li>
-        <li><a href="https://www.co.uintah.ut.us/public-works" target="_blank" rel="noopener noreferrer">Uintah County Public Works (Unincorporated Areas)</a></li>
+        <li><a href="https://www.vernal.gov/directory.aspx?did=20" target="_blank" rel="noopener noreferrer">Vernal Public Works</a></li>
+        <li><a href="https://naplescityut.gov/road-department/" target="_blank" rel="noopener noreferrer">Naples Public Works</a></li>
+        <li><a href="https://www.uintah.gov/departments/" target="_blank" rel="noopener noreferrer">Uintah County Public Works (Unincorporated Areas)</a></li>
       </ul>
 
       <h2>Utah County</h2>
       <ul>
-        <li><a href="https://www.lehi-ut.gov/departments/public-works" target="_blank" rel="noopener noreferrer">Lehi Public Works</a></li>
-        <li><a href="https://www.americanfork.gov/156/Public-Works" target="_blank" rel="noopener noreferrer">American Fork Public Works</a></li>
-        <li><a href="https://www.vineyard.utah.gov/156/Public-Works" target="_blank" rel="noopener noreferrer">Vineyard Public Works</a></li>
-        <li><a href="https://www.orem.org/public-works" target="_blank" rel="noopener noreferrer">Orem Public Works</a></li>
-        <li><a href="https://www.provo.org/departments/public-works" target="_blank" rel="noopener noreferrer">Provo Public Works</a></li>
-        <li><a href="https://www.payson.org/public-works" target="_blank" rel="noopener noreferrer">Payson Public Works</a></li>
-        <li><a href="https://www.utahcounty.gov/departments/public-works" target="_blank" rel="noopener noreferrer">Utah County Public Works (Unincorporated Areas)</a></li>
+        <li><a href="https://www.lehi-ut.gov/departments/public-works/" target="_blank" rel="noopener noreferrer">Lehi Public Works</a></li>
+        <li><a href="https://americanfork.gov/243/Public-Works" target="_blank" rel="noopener noreferrer">American Fork Public Works</a></li>
+        <li><a href="https://orem.gov/pw/" target="_blank" rel="noopener noreferrer">Orem Public Works</a></li>
+        <li><a href="https://www.provo.gov/357/Public-Works" target="_blank" rel="noopener noreferrer">Provo Public Works</a></li>
+        <li><a href="https://www.utahcounty.gov/Dept/pubwrks/index.asp" target="_blank" rel="noopener noreferrer">Utah County Public Works</a></li>
       </ul>
 
       <h2>Wasatch County</h2>
       <ul>
-        <li><a href="https://www.heberut.gov/departments/public-works" target="_blank" rel="noopener noreferrer">Heber City Public Works</a></li>
-        <li><a href="https://www.midwaycityut.org/public-works" target="_blank" rel="noopener noreferrer">Midway Public Works</a></li>
-        <li><a href="https://www.wasatchcounty.gov/Public-Works" target="_blank" rel="noopener noreferrer">Wasatch County Public Works (Unincorporated Areas)</a></li>
+        <li><a href="https://www.heberut.gov/174/Public-Works" target="_blank" rel="noopener noreferrer">Heber City Public Works</a></li>
+        <li><a href="https://www.midwaycityut.org/public-works/" target="_blank" rel="noopener noreferrer">Midway Public Works</a></li>
+        <li><a href="https://www.wasatchcounty.gov/publicworks" target="_blank" rel="noopener noreferrer">Wasatch County Public Works</a></li>
       </ul>
 
       <h2>Washington County</h2>
       <ul>
-        <li><a href="https://www.stgeorgeutah.gov/public-works" target="_blank" rel="noopener noreferrer">St. George Public Works</a></li>
-        <li><a href="https://www.washco.utah.gov/departments/public-works" target="_blank" rel="noopener noreferrer">Washington County Public Works (Unincorporated Areas)</a></li>
+        <li><a href="https://sgcityutah.gov/departments/public_works/index.php" target="_blank" rel="noopener noreferrer">St. George Public Works</a></li>
+        <li><a href="https://www.cityofhurricane.com/188/Public-Works" target="_blank" rel="noopener noreferrer">Hurricane Public Works</a></li>
+        <li><a href="https://washingtoncity.org/services/publicworks" target="_blank" rel="noopener noreferrer">Washington City Public Works</a></li>
+        <li><a href="https://www.washco.utah.gov/departments/public-works/" target="_blank" rel="noopener noreferrer">Washington County Public Works</a></li>
       </ul>
-
+{/*  */}
       <h2>Wayne County</h2>
       <ul>
-        <li><a href="https://www.hanksville.utah.gov/public-works" target="_blank" rel="noopener noreferrer">Hanksville Public Works</a></li>
-        <li><a href="https://www.waynecountyutah.org/public-works" target="_blank" rel="noopener noreferrer">Wayne County Public Works (Unincorporated Areas)</a></li>
+        <li><a href="https://www.hanksvilleutah.gov/government" target="_blank" rel="noopener noreferrer">Hanksville</a></li>
+        <li><a href="https://waynecountyutah.org/pages/wayne-county-road-department" target="_blank" rel="noopener noreferrer">Wayne County Roads</a></li>
       </ul>
 
       <h2>Weber County</h2>
       <ul>
-        <li><a href="https://www.ogdencity.com/156/Public-Works" target="_blank" rel="noopener noreferrer">Ogden Public Works</a></li>
-        <li><a href="https://www.royutah.org/156/Public-Works" target="_blank" rel="noopener noreferrer">Roy Public Works</a></li>
-        <li><a href="https://www.clearfieldcity.org/156/Public-Works" target="_blank" rel="noopener noreferrer">Clearfield Public Works</a></li>
-        <li><a href="https://www.webercountyutah.gov/public-works" target="_blank" rel="noopener noreferrer">Weber County Public Works (Unincorporated Areas)</a></li>
+        <li><a href="https://www.ogdencity.gov/313/Public-Services" target="_blank" rel="noopener noreferrer">Ogden Public Works</a></li>
+        <li><a href="https://www.royutah.gov/departments/public_works/index.php" target="_blank" rel="noopener noreferrer">Roy Public Works</a></li>
+        <li><a href="https://clearfield.city/public-works/" target="_blank" rel="noopener noreferrer">Clearfield Public Works</a></li>
+        <li><a href="https://www.webercountyutah.gov/departments.php" target="_blank" rel="noopener noreferrer">Weber County Public Works (Unincorporated Areas)</a></li>
       </ul>
 
       <h2>Additional Resources</h2>
