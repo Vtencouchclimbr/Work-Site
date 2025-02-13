@@ -62,7 +62,7 @@ function Api() {
       }}
       placeholder="Enter word here" 
       />
-      <button className='rounded text-light btn btn-outline-success' 
+      <button className='m-2 rounded text-light btn btn-outline-success' 
       onClick={handleSubmit}
       >Submit</button>
       {data && data.length > 0 ? (
