@@ -23,7 +23,7 @@ function App() {
     <div className="app-container">
       {/* Top bar for buttons */}
       <div className="d-flex justify-content-center top-buttons">
-      <h1 className="" style={{ color:'rgb(224, 149, 27)', fontSize:'50px' }}>UTAH</h1>
+      <h1 className="me-5 mt-1" style={{ color:'rgb(224, 149, 27)', fontSize:'50px', textDecoration:'underline' }}>UTAH</h1>
         <a href="https://www.udot.utah.gov/connect/" target="_blank" rel="noopener noreferrer">
           <button type="button" className="btn btn-outline-secondary mx-3 my-2">
             <FontAwesomeIcon icon={faRoad} size="3x" />

@@ -3,7 +3,7 @@ import './CountyClerks.css';
 const CountyClerks = () => {
   return (
     <div className="county-clerks">
-      <h1>All Utah County Clerks</h1>
+      <h1 className="">All Utah County Clerks</h1>
 
       <h2>Beaver County</h2>
       <div className="clerk-info text-color">

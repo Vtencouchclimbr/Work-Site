@@ -7,28 +7,30 @@ const PublicWorksLinks = () => {
 
       <h2>Beaver County</h2>
       <ul>
-        <li><a href="https://www.beaver.utah.gov/public-works" target="_blank" rel="noopener noreferrer">Beaver City Public Works</a></li>
-        <li><a href="https://www.beaverco.utah.gov/departments/public-works" target="_blank" rel="noopener noreferrer">Beaver County Public Works (Unincorporated Areas)</a></li>
+        <li><a href="https://www.beaver.utah.gov/124/Road-Department" target="_blank" rel="noopener noreferrer">Beaver City Public Works</a></li>
+        <li><a href="https://www.milfordcityutah.com/" target="_blank" rel="noopener noreferrer">Milford City</a></li>
+        <li><a href="https://townofminersville.municipalimpact.com/city-manager" target="_blank" rel="noopener noreferrer">Minersville</a></li>
       </ul>
 
       <h2>Box Elder County</h2>
       <ul>
-        <li><a href="https://www.brighamcity.utah.gov/departments/public-works" target="_blank" rel="noopener noreferrer">Brigham City Public Works</a></li>
-        <li><a href="https://www.boxeldercounty.org/public-works" target="_blank" rel="noopener noreferrer">Box Elder County Public Works (Unincorporated Areas)</a></li>
+        <li><a href="https://www.bcutah.gov/o/brighamcity/page/public-works" target="_blank" rel="noopener noreferrer">Brigham City Public Works</a></li>
+        <li><a href="https://tremontoncity.org/services/public-works/" target="_blank" rel="noopener noreferrer">Tremonton Public Works</a></li>
       </ul>
 
       <h2>Cache County</h2>
       <ul>
-        <li><a href="https://www.loganutah.org/public-works" target="_blank" rel="noopener noreferrer">Logan Public Works</a></li>
-        <li><a href="https://www.cachecounty.org/public-works" target="_blank" rel="noopener noreferrer">Cache County Public Works (Unincorporated Areas)</a></li>
+        <li><a href="https://www.loganutah.gov/government/departments/public_works/index.php" target="_blank" rel="noopener noreferrer">Logan Public Works</a></li>
+        <li><a href="https://smithfieldutah.gov/publicworks" target="_blank" rel="noopener noreferrer">Smithfield Public Works</a></li>
+        <li><a href="https://www.hyrumcity.gov/publicworks#:~:text=Hyrum%20City%20provides%20power%2C%20water,listed%20on%20the%20side%20tabs." target="_blank" rel="noopener noreferrer">Hyrum Public Works</a></li>
       </ul>
 
       <h2>Carbon County</h2>
       <ul>
         <li><a href="https://www.pricecityutah.com/public-works" target="_blank" rel="noopener noreferrer">Price City Public Works</a></li>
-        <li><a href="https://www.carbon.utah.gov/departments/public-works" target="_blank" rel="noopener noreferrer">Carbon County Public Works (Unincorporated Areas)</a></li>
+        <li><a href="https://wellingtonutah.us/public-works.html" target="_blank" rel="noopener noreferrer">Wellington Public Works</a></li>
       </ul>
-
+{/*  */}
       <h2>Daggett County</h2>
       <ul>
         <li><a href="https://www.daggettcounty.org/public-works" target="_blank" rel="noopener noreferrer">Daggett County Public Works (Unincorporated Areas)</a></li>
