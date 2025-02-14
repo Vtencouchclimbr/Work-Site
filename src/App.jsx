@@ -25,6 +25,7 @@ function App() {
     <div className="app-container">
       {/* Top bar for buttons */}
       <div className="d-flex flex-column flex-md-row justify-content-center align-items-center top-buttons">
+        <a href="https://www.horrocks.net/" target="_blank" rel="noopener noreferrer" className="m-2">Company Site</a>
         <h1 className="mt-3 mb-3 mb-md-0 me-md-5" style={{ color: 'rgb(224, 149, 27)', fontSize: 'clamp(2rem, 5vw, 3rem)', textDecoration: 'underline' }}>
           UTAH
         </h1>
