@@ -36,18 +36,6 @@ function App() {
               <FontAwesomeIcon icon={faRoad} size="3x" className="d-none d-md-block" />
             </button>
           </a>
-          <a href="https://www.asce.org/publications-and-news/civil-engineering-source/society-news/article/2022/07/newly-updated-asce-38-22-utility-engineering-standard-and-new-companion-standard-asce-75-22-now-available" target="_blank" rel="noopener noreferrer" className="m-2">
-            <button type="button" className="btn btn-outline-secondary">
-              ACSE<br />
-              .org
-            </button>
-          </a>
-          <a href="https://www.fhwa.dot.gov/programadmin/sueindex.cfm" target="_blank" rel="noopener noreferrer" className="m-2">
-            <button type="button" className="btn btn-outline-secondary">
-              FHWA<br />
-              .gov
-            </button>
-          </a>
           <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer" className="m-2">
             <button type="button" className="btn btn-outline-secondary">
               <FontAwesomeIcon icon={faBrain} size="lg" className="d-block d-md-none" />
@@ -70,6 +58,18 @@ function App() {
             <button type="button" className="btn btn-outline-secondary">
               <FontAwesomeIcon icon={faPersonDigging} size="lg" className="d-block d-md-none" />
               <FontAwesomeIcon icon={faPersonDigging} size="3x" className="d-none d-md-block" />
+            </button>
+          </a>
+          <a href="https://www.asce.org/publications-and-news/civil-engineering-source/society-news/article/2022/07/newly-updated-asce-38-22-utility-engineering-standard-and-new-companion-standard-asce-75-22-now-available" target="_blank" rel="noopener noreferrer" className="m-2">
+            <button type="button" className="btn btn-outline-secondary">
+              ACSE<br />
+              .org
+            </button>
+          </a>
+          <a href="https://www.fhwa.dot.gov/programadmin/sueindex.cfm" target="_blank" rel="noopener noreferrer" className="m-2">
+            <button type="button" className="btn btn-outline-secondary">
+              FHWA<br />
+              .gov
             </button>
           </a>
           <div className="ms-5 mt-3">
