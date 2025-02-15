@@ -19,7 +19,6 @@ import PublicWorksLinks from './components/PublicWorksLinks';
 import CountyClerks from './components/CountyClerks';
 import TodoList from './components/TodoList';
 import Clock from './components/Clock';
-import SearchBar from './components/SearchBar';
 import MapDisplay from './components/MapDisplay';
 
 function App() {
@@ -100,7 +99,6 @@ function App() {
           </div>
           <div className="mb-4 d-flex flex-column flex-md-row">
             <Dictionary />
-            <SearchBar />
             <MapDisplay />
           </div>
         </div>
