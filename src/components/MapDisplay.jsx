@@ -8,7 +8,7 @@ const MapDisplay = ({ locations, zoomLevel = 4 }) => {
   useEffect(() => {
     window.initMap = initMap; // Make initMap available in global scope
 
-    const apiKey = import.meta.env.VITE_APP_GOOGLE_API_KEY; // Assuming this is how you'd manage API keys in JS
+    const apiKey = import.meta.env.VITE_GOOGLE_API_KEY; // Assuming this is how you'd manage API keys in JS
     const url = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
     const script = document.createElement('script');
     script.src = url;
