@@ -19,6 +19,7 @@ import PublicWorksLinks from './components/PublicWorksLinks';
 import CountyClerks from './components/CountyClerks';
 import TodoList from './components/TodoList';
 import Clock from './components/Clock';
+import MapDisplay from './components/MapDisplay';
 
 function App() {
   return (
@@ -98,6 +99,7 @@ function App() {
           </div>
           <div className="mb-4">
             <Dictionary />
+            <MapDisplay />
           </div>
         </div>
       </div>
