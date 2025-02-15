@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react';
-
-// Note: The CSS import is commented out in the original code, so it's omitted here as well.
+import './MapDisplay.css';
 
 const MapDisplay = ({ locations, zoomLevel = 4 }) => {
   const mapRef = useRef(null);
@@ -78,8 +77,7 @@ const MapDisplay = ({ locations, zoomLevel = 4 }) => {
 
   return (
     <div className='map-container'>
-      <h3 className='text-light'>DYNAMIC MAP</h3>
-      <div ref={mapRef} style={{ height: '600px', width: '100%' }}></div>
+      <div ref={mapRef} style={{ height: '400px', width: '400px' }}></div>
     </div>
   );
 };
