@@ -76,8 +76,8 @@ const MapDisplay = ({ locations, zoomLevel = 4 }) => {
   };
 
   return (
-    <div className='map-container'>
-      <div ref={mapRef} style={{ height: '400px', width: '400px' }}></div>
+    <div className='map-container mt-4'>
+      <div ref={mapRef}style={{ maxHeight: '400px', maxWidth: '400px' }}></div>
     </div>
   );
 };

@@ -1,3 +1,15 @@
 .map-container {
+    width: 100%; /* Ensures the container takes up full width of its parent */
+  }
   
-}
+  .map-container div {
+    height: 400px; /* Default height for larger screens */
+    width: 100%;
+  }
+  
+  @media (max-width: 767px) { /* Adjust this breakpoint as needed */
+    .map-container div {
+      height: 300px; /* Adjust height for better fit on mobile */
+      width: 300px; /* Adjust height for better fit on mobile */
+    }
+  }
