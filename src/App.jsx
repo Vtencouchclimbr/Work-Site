@@ -19,8 +19,8 @@ import PublicWorksLinks from './components/PublicWorksLinks';
 import CountyClerks from './components/CountyClerks';
 import TodoList from './components/TodoList';
 import Clock from './components/Clock';
-// import MapDisplay from './components/MapDisplay';
 import TechInfo from './components/TechInfo';
+import Colors from './components/Colors';
 
 function App() {
   return (
@@ -103,6 +103,7 @@ function App() {
         {/* Centered content for Calculator and Dictionary */}
         <div className="centered-content col-12 col-md-6 d-flex flex-column mb-4 mb-md-0">
         <div style={{ marginLeft:'20px', minHeight:'100vh', borderRadius:'10px' }}>
+          <Colors />
           <TechInfo />
         </div>
         </div>
