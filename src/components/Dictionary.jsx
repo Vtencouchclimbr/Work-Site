@@ -48,7 +48,7 @@ function Api() {
   if (error) return <div>Error: {error.message}</div>;
   
   return (
-    <div className="container text-center">
+    <div className="container text-center text-light">
       <h3 className='text-light'>Dictionary</h3>
       <input 
       className='rounded bg-dark text-light text-center'
@@ -66,7 +66,7 @@ function Api() {
       onClick={handleSubmit}
       >Submit</button>
       {data && data.length > 0 ? (
-        <div className="bg-transparent text-dark">
+        <div className="bg-transparent text-light">
           <div className="card-body">
             <h2 className="card-title">{data[0].word}</h2>
             {data[0].meanings.map((meaning, index) => (

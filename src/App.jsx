@@ -88,22 +88,23 @@ function App() {
       {/* Main content area */}
       <div className="main-content d-flex flex-column flex-md-row mt-4">
         {/* Sidebar for PublicWorksLinks and CountyClerks */}
+        <div>
         <div className="sidebar col-12 col-md-3 mb-4 mb-md-0">
           <PublicWorksLinks />
           <CountyClerks />
+        </div>
+        <div className="mt-4 mb-4 mx-2">
+            <Calculator />
+            <div style={{ maxWidth:'575px', borderRadius:'10px' }}>
+            <Dictionary />
+            </div>
+        </div>
         </div>
         {/* Centered content for Calculator and Dictionary */}
         <div className="centered-content col-12 col-md-6 d-flex flex-column mb-4 mb-md-0">
         <div style={{ marginLeft:'20px', minHeight:'100vh', borderRadius:'10px' }}>
           <TechInfo />
         </div>
-          <div className="mb-4">
-            <Calculator />
-          </div>
-          <div className="mb-4 d-flex flex-column flex-md-row">
-            <Dictionary />
-            {/* <MapDisplay /> */}
-          </div>
         </div>
       </div>
     </div>
