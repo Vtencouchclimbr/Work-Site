@@ -83,27 +83,29 @@ function App() {
       <div className="main-content d-flex flex-column flex-md-row mt-4">
         {/* Sidebar for PublicWorksLinks and CountyClerks */}
         <div>
-        <div className="sidebar col-12 col-md-3 mb-4 mb-md-0">
+        <div className="sidebar col-12 col-md-3 mb-4 mb-md-0 order-md-1 order-2">
           <PublicWorksLinks />
           <CountyClerks />
         </div>
-        <div className="mt-4 mb-4 mx-2">
-            <Calculator />
-            <div style={{ maxWidth:'575px', borderRadius:'10px' }}>
-            <Dictionary />
+        <div className="mb-4 mx-2">
+              <Calculator />
+              <div style={{ maxWidth:'575px', borderRadius:'10px' }}>
+                <Dictionary />
+              </div>
             </div>
-        </div>
-        </div>
-        {/* Centered content for Calculator and Dictionary */}
-        <div className="d-flex">
-        <div className="centered-content col-12 col-md-6 d-flex flex-column mb-4 mb-md-0">
-        <div style={{ marginLeft:'20px', minHeight:'100vh', borderRadius:'10px' }}>
-          <Colors />
-          <TechInfo />
-        </div>
-        </div>
-        <div className="mb-4">
-          <TodoList />
+            </div>
+        {/* Centered content */}
+        <div className="col-12 col-md-9 order-md-2 order-1">
+          <div className="d-flex flex-column">
+            <div className="d-flex flex-column flex-md-row">
+              <div className="mb-4" style={{ marginLeft:'20px', minHeight:'100vh', borderRadius:'10px' }}>
+                <Colors />
+                <TechInfo />
+              </div>
+              <div className="mb-4">
+                <TodoList />
+              </div>
+            </div>
           </div>
         </div>
       </div>

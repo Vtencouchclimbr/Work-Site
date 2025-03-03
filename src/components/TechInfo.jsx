@@ -5,7 +5,7 @@ import Assign from '../util/Assign.png';
 const Tech = () => {
 
   return (
-<div style={{ width:'800px' }} className="btn-group d-felx flex-column">
+<div style={{ maxWidth:'800px' }} className="btn-group d-felx flex-column">
   <button style={{ width:'130px' }} className="btn btn-primary btn-sm dropdown-toggle rounded mb-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Line Creation
   </button>
