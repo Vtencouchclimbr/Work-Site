@@ -5,8 +5,8 @@ import Assign from '../util/Assign.png';
 const Tech = () => {
 
   return (
-<div className="btn-group d-felx flex-column">
-  <button className="btn btn-primary btn-sm dropdown-toggle rounded mb-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+<div style={{ width:'800px' }} className="btn-group d-felx flex-column">
+  <button style={{ width:'130px' }} className="btn btn-primary btn-sm dropdown-toggle rounded mb-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Line Creation
   </button>
   <ul className="dropdown-menu bg-dark text-light">
@@ -23,7 +23,7 @@ const Tech = () => {
   <img style={{height:'500px'}} className='m-2' src={Assign} alt="assign" />
   </ul>
 
-  <button className="btn btn-primary btn-sm dropdown-toggle rounded mb-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <button style={{ width:'130px' }} className="btn btn-primary btn-sm dropdown-toggle rounded mb-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Cell Creation
   </button>
   <ul className="dropdown-menu bg-dark text-light">

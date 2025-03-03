@@ -19,12 +19,12 @@ const Colors = () => {
   return (
     <>
     <div>
-        <p className='text-light'>
+        <p style={{ color:'#6c757d' }} className=''>
         <h4>UTILITY QUALITY:</h4>
-         A - Existing Utility Record Drawings: Historical or utility company-provided drawings showing approximate locations and details of subsurface utilities. <br />
-         B - Utility Company Database Information: GIS data or digital records from utility companies showing the general location and attributes of utilities without field verification.<br />
-         C - Utility Identification through Surface Features: Above-ground indicators like manholes or vaults that suggest the location of subsurface utilities.<br />
-         D - Surveyed Surface Features: Surface markers, like utility poles or access points, surveyed to help identify the approximate locations of subsurface utilities.<br />
+         A - Existing Utility Record Drawings: Historical or utility company-provided drawings<br /> showing approximate locations and details of subsurface utilities. <br />
+         B - Utility Company Database Information: GIS data or digital records from utility companies<br /> showing the general location and attributes of utilities without field verification.<br />
+         C - Utility Identification through Surface Features: Above-ground indicators like manholes<br /> or vaults that suggest the location of subsurface utilities.<br />
+         D - Surveyed Surface Features: Surface markers, like utility poles or access points, surveyed<br /> to help identify the approximate locations of subsurface utilities.<br />
          </p>
     </div>
     <div className="square-container">
