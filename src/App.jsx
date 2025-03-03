@@ -78,13 +78,7 @@ function App() {
             <Clock />
           </div>
         </div>
-      </div>
-      {/* Aside for Clock and TodoList (fixed on larger screens) */}
-      <aside className="aside col-12 col-md-3 d-flex flex-column mb-4 mb-md-0 order-md-last">
-        <div className="mb-4">
-          <TodoList />
-        </div>
-      </aside>
+      </div>      
       {/* Main content area */}
       <div className="main-content d-flex flex-column flex-md-row mt-4">
         {/* Sidebar for PublicWorksLinks and CountyClerks */}
@@ -101,11 +95,16 @@ function App() {
         </div>
         </div>
         {/* Centered content for Calculator and Dictionary */}
+        <div className="d-flex">
         <div className="centered-content col-12 col-md-6 d-flex flex-column mb-4 mb-md-0">
         <div style={{ marginLeft:'20px', minHeight:'100vh', borderRadius:'10px' }}>
           <Colors />
           <TechInfo />
         </div>
+        </div>
+        <div className="mb-4">
+          <TodoList />
+          </div>
         </div>
       </div>
     </div>
