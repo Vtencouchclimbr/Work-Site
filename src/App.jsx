@@ -19,8 +19,17 @@ import PublicWorksLinks from './components/PublicWorksLinks';
 import CountyClerks from './components/CountyClerks';
 import TodoList from './components/TodoList';
 import Clock from './components/Clock';
-import TechInfo from './components/TechInfo';
+// import TechInfo from './components/TechInfo';
 import Colors from './components/Colors';
+import Comm from './components/Comm';
+import Domw from './components/Domw';
+import Fibr from './components/Fibr';
+import Irrg from './components/Irrg';
+import Ngas from './components/Ngas';
+import Power from './components/Power';
+import Sswr from './components/Sswr';
+import Strm from './components/Strm';
+import Tvis from './components/Tvis';
 
 function App() {
   return (
@@ -83,13 +92,22 @@ function App() {
       <div className="main-content d-flex flex-column flex-md-row mt-4">
         {/* Sidebar for PublicWorksLinks and CountyClerks */}
         <div>
+        <Comm />
+        <Domw />
+        <Fibr />
+        <Irrg />
+        <Ngas />
+        <Power />
+        <Sswr />
+        <Strm />
+        <Tvis />
         <div className="sidebar col-12 col-md-3 mb-4 mb-md-0 order-md-1 order-2">
           <PublicWorksLinks />
           <CountyClerks />
         </div>
         <div className="mb-4 mx-2">
               <Calculator />
-              <div style={{ maxWidth:'575px', borderRadius:'10px' }}>
+              <div style={{ maxWidth:'575px', borderRadius:'10px', marginBottom:'300px' }}>
                 <Dictionary />
               </div>
             </div>
@@ -100,7 +118,7 @@ function App() {
             <div className="d-flex flex-column flex-md-row">
               <div className="mb-4" style={{ marginLeft:'20px', minHeight:'100vh', borderRadius:'10px' }}>
                 <Colors />
-                <TechInfo />
+                {/* <TechInfo /> */}
               </div>
               <div className="mb-4">
                 <TodoList />

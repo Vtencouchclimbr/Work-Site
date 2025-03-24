@@ -1,0 +1,67 @@
+.comm-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+  
+  .toggle-button-comm {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff9800; /* Orange for communication theme */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+    transition: background-color 0.2s;
+  }
+  
+  .toggle-button-comm:hover {
+    background-color: #f57c00;
+  }
+  
+  .toggle-button-comm:active {
+    background-color: #e64a19;
+  }
+  
+  .comm-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .comm-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+    padding-left: 6px;
+    margin: 5px 0;
+    background-color: #da811c;
+    border-radius: 4px;
+  }
+  
+  .comm-content {
+    flex-grow: 1;
+    margin-right: 10px;
+    word-break: break-word;
+  }
+  
+  .copy-button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .copy-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .copy-button:active {
+    background-color: #004085;
+  }
