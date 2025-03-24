@@ -2,13 +2,15 @@ import { useState } from 'react';
 import './Strm.css'; // Specific CSS file for this component
 
 const Strm = () => {
-  const [isExpanded, setIsExpanded] = useState(false); // State to toggle collapse
+  const [isExpanded, setIsExpanded] = useState(false); // State to toggle main collapse
+  const [expandedCompanies, setExpandedCompanies] = useState({}); // State to toggle company collapse
+  const [copiedIndex, setCopiedIndex] = useState(null);
+
   const layerNames = [
-    "V-STRM-INLT - HCPW",
-    "V-STRM-INLT - HCPW - 24in 36in",
-    "V-STRM-INLT - HCPW - 36in 72in",
-    "V-STRM-INLT - HCPW - 48in",
-    "V-STRM-INLT - HCPW - 60in",
+    "V-STRM-INLT - HCPW - 24in 36in - C",
+    "V-STRM-INLT - HCPW - 36in 72in - C",
+    "V-STRM-INLT - HCPW - 48in - C",
+    "V-STRM-INLT - HCPW - 60in - C",
     "V-STRM-INLT - HCPW - D",
     "V-STRM-MAIN-DITCH - HCPW - D",
     "V-STRM-MAIN-PIPE - HCPW - 6in - PVC - D",
@@ -35,13 +37,22 @@ const Strm = () => {
     "V-STRM-MAIN-PIPE - HCPW - ukn - D",
     "V-STRM-MAIN-PIPE - HCPW - ukn - RCP - D",
     "V-STRM-MAIN-PIPE - HCPW - ukn - ukn - D",
-    "V-STRM-MHOL - HCPW - 36in 72in",
-    "V-STRM-MHOL - HCPW - 48in",
-    "V-STRM-MHOL - HCPW - 60in",
+    "V-STRM-MHOL - HCPW - 36in 72in - C",
+    "V-STRM-MHOL - HCPW - 48in - C",
+    "V-STRM-MHOL - HCPW - 60in - C",
     "V-STRM-MHOL - HCPW - D",
   ];
 
-  const [copiedIndex, setCopiedIndex] = useState(null);
+  // Group layer names by company (second segment)
+  const groupedLayers = layerNames.reduce((acc, layer) => {
+    const parts = layer.split(" - ");
+    const company = parts[1]; // Company is always the second segment
+    if (!acc[company]) {
+      acc[company] = [];
+    }
+    acc[company].push(layer);
+    return acc;
+  }, {});
 
   const handleCopy = (text, index) => {
     navigator.clipboard.writeText(text)
@@ -58,6 +69,13 @@ const Strm = () => {
     setIsExpanded(!isExpanded);
   };
 
+  const toggleCompanyExpand = (company) => {
+    setExpandedCompanies(prev => ({
+      ...prev,
+      [company]: !prev[company],
+    }));
+  };
+
   return (
     <div className="strm-container">
       <button 
@@ -68,15 +86,29 @@ const Strm = () => {
       </button>
       {isExpanded && (
         <ul className="strm-list">
-          {layerNames.map((item, index) => (
-            <li key={index} className="strm-item">
-              <span className="strm-content">{item}</span>
+          {Object.keys(groupedLayers).map(company => (
+            <li key={company} className="company-item">
               <button
-                onClick={() => handleCopy(item, index)}
-                className="copy-button"
+                className="toggle-button-company"
+                onClick={() => toggleCompanyExpand(company)}
               >
-                {copiedIndex === index ? 'Copied!' : 'Copy'}
+                {expandedCompanies[company] ? `Collapse ${company}` : `Expand ${company}`}
               </button>
+              {expandedCompanies[company] && (
+                <ul className="company-layers">
+                  {groupedLayers[company].map((item, index) => (
+                    <li key={index} className="strm-item">
+                      <span className="strm-content">{item}</span>
+                      <button
+                        onClick={() => handleCopy(item, `${company}-${index}`)}
+                        className="copy-button"
+                      >
+                        {copiedIndex === `${company}-${index}` ? 'Copied!' : 'Copy'}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
           ))}
         </ul>

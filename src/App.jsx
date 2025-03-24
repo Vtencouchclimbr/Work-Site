@@ -106,12 +106,12 @@ function App() {
           <CountyClerks />
         </div>
         <div className="mb-4 mx-2">
-              <Calculator />
-              <div style={{ maxWidth:'575px', borderRadius:'10px', marginBottom:'300px' }}>
-                <Dictionary />
-              </div>
+            <Calculator />
+            <div style={{ maxWidth:'575px', borderRadius:'10px', marginBottom:'300px' }}>
+              <Dictionary />
             </div>
-            </div>
+        </div>
+        </div>
         {/* Centered content */}
         <div className="col-12 col-md-9 order-md-2 order-1">
           <div className="d-flex flex-column">

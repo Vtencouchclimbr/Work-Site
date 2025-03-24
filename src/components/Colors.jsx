@@ -1,20 +1,20 @@
 import './Colors.css';
 
 const Colors = () => {
-  const colors = ['red', 'yellow', 'orange', 'blue', 'green', 'purple' ];
-  const customText = ['Power', 'Gas', 'Com/Fib', 'Water', 'Sewer',  'Storm/Irr'];
+  // const colors = ['red', 'yellow', 'orange', 'blue', 'green', 'purple' ];
+  // const customText = ['Power', 'Gas', 'Com/Fib', 'Water', 'Sewer',  'Storm/Irr'];
   
-  const numberOfSquares = 6; // Increased to show wrapping
+  // const numberOfSquares = 6; // Increased to show wrapping
 
-  const squares = Array.from({ length: numberOfSquares }, (_, index) => (
-    <div
-      key={index}
-      className="square"
-      style={{ backgroundColor: colors[index % colors.length] }}
-    >
-      {customText[index % customText.length]}
-    </div>
-  ));
+  // const squares = Array.from({ length: numberOfSquares }, (_, index) => (
+  //   <div
+  //     key={index}
+  //     className="square"
+  //     style={{ backgroundColor: colors[index % colors.length] }}
+  //   >
+  //     {customText[index % customText.length]}
+  //   </div>
+  // ));
 
   return (
     <>
@@ -28,7 +28,7 @@ const Colors = () => {
          </p>
     </div>
     <div className="square-container">
-      {squares}
+      {/* {squares} */}
     </div>
     </>
   );
