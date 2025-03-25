@@ -20,11 +20,12 @@ const Colors = () => {
     <>
     <div>
         <p style={{ color:'#6c757d' }} className=''>
-        <h4>UTILITY QUALITY:</h4>
-         A - Existing Utility Record Drawings: Historical or utility company-provided drawings<br /> showing approximate locations and details of subsurface utilities. <br />
-         B - Utility Company Database Information: GIS data or digital records from utility companies<br /> showing the general location and attributes of utilities without field verification.<br />
-         C - Utility Identification through Surface Features: Above-ground indicators like manholes<br /> or vaults that suggest the location of subsurface utilities.<br />
-         D - Surveyed Surface Features: Surface markers, like utility poles or access points, surveyed<br /> to help identify the approximate locations of subsurface utilities.<br />
+        <h5>UTILITY QUALITY:</h5>
+         A - The highest level of accuracy, involving<br /> precise horizontal and vertical location of utilities,<br /> typically obtained through physical exposure<br /> (e.g., potholing or excavation). <br />
+         B - Involves designating utilities using<br /> geophysical methods (e.g., ground-penetrating radar,<br /> electromagnetic locators) to determine approximate<br /> horizontal locations. <br />
+         C - Relies on existing utility records and<br /> surface features (e.g., manholes, valve boxes) to<br /> infer utility locations, with less accuracy than QL-B.<br />
+         D - The lowest level, based solely on<br /> utility records, verbal accounts, or educated guesses,<br /> with no field verification.
+<br />
          </p>
     </div>
     <div className="square-container">

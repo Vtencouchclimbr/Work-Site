@@ -30,6 +30,7 @@ import Power from './components/Power';
 import Sswr from './components/Sswr';
 import Strm from './components/Strm';
 import Tvis from './components/Tvis';
+import Abbrevs from './components/Abbrevs';
 
 function App() {
   return (
@@ -101,6 +102,7 @@ function App() {
         <Sswr />
         <Strm />
         <Tvis />
+        <Abbrevs />
         <div className="sidebar col-12 col-md-3 mb-4 mb-md-0 order-md-1 order-2">
           <PublicWorksLinks />
           <CountyClerks />
