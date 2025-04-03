@@ -1,46 +1,45 @@
 import { useState } from 'react';
-import './Domw.css'; // Specific CSS file for this component
+import './Domw.css';
 
 const Domw = () => {
-  const [isExpanded, setIsExpanded] = useState(false); // State to toggle main collapse
-  const [expandedCompanies, setExpandedCompanies] = useState({}); // State to toggle company collapse
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [companyAcronym, setCompanyAcronym] = useState('');
+  const [inputValue, setInputValue] = useState('');
   const [copiedIndex, setCopiedIndex] = useState(null);
 
-  const layerNames = [
-    "V-DOMW - JVWCD - D",
-    "V-DOMW - LEHI - D",
-    "V-DOMW-AQUEDUCT - JVWCD - 92in - B",
-    "V-DOMW-AQUEDUCT - JVWCD - 92in - D",
-    "V-DOMW-HYDT - COH",
-    "V-DOMW-HYDT - COH - D",
-    "V-DOMW-MAIN-PIPE - COH - 4in - ukn - B",
-    "V-DOMW-MAIN-PIPE - COH - 4in - ukn - D",
-    "V-DOMW-MAIN-PIPE - COH - 6in - ukn - B",
-    "V-DOMW-MAIN-PIPE - COH - 6in - ukn - D",
-    "V-DOMW-MAIN-PIPE - COH - 8in - ukn - B",
-    "V-DOMW-MAIN-PIPE - COH - 8in - ukn - D",
-    "V-DOMW-MAIN-PIPE - COH - 10in - ukn - B",
-    "V-DOMW-MAIN-PIPE - COH - 10in - ukn - D",
-    "V-DOMW-MAIN-PIPE - COH - 12in - ukn - B",
-    "V-DOMW-MAIN-PIPE - COH - 12in - ukn - D",
-    "V-DOMW-MAIN-PIPE - COH - unk - ukn - B",
-    "V-DOMW-MAIN-PIPE - COH - unk - ukn - D",
-    "V-DOMW-METER - HWC",
-    "V-DOMW-METER - HWC - D",
-    "V-DOMW-VALVE - HWC",
-    "V-DOMW-VALVE - HWC - D",
+  const layerTemplates = [
+    "V-DOMW - {company} - D",
+    "V-DOMW-AQUEDUCT - {company} - 92in - B",
+    "V-DOMW-AQUEDUCT - {company} - 92in - D",
+    "V-DOMW-HYDT - {company}",
+    "V-DOMW-HYDT - {company} - D",
+    "V-DOMW-MAIN-PIPE - {company} - 4in - ukn - B",
+    "V-DOMW-MAIN-PIPE - {company} - 4in - ukn - D",
+    "V-DOMW-MAIN-PIPE - {company} - 6in - ukn - B",
+    "V-DOMW-MAIN-PIPE - {company} - 6in - ukn - D",
+    "V-DOMW-MAIN-PIPE - {company} - 8in - ukn - B",
+    "V-DOMW-MAIN-PIPE - {company} - 8in - ukn - D",
+    "V-DOMW-MAIN-PIPE - {company} - 10in - ukn - B",
+    "V-DOMW-MAIN-PIPE - {company} - 10in - ukn - D",
+    "V-DOMW-MAIN-PIPE - {company} - 12in - ukn - B",
+    "V-DOMW-MAIN-PIPE - {company} - 12in - ukn - D",
+    "V-DOMW-MAIN-PIPE - {company} - unk - ukn - B",
+    "V-DOMW-MAIN-PIPE - {company} - unk - ukn - D",
+    "V-DOMW-METER - {company}",
+    "V-DOMW-METER - {company} - D",
+    "V-DOMW-VALVE - {company}",
+    "V-DOMW-VALVE - {company} - D",
   ];
 
-  // Group layer names by company (second segment)
-  const groupedLayers = layerNames.reduce((acc, layer) => {
-    const parts = layer.split(" - ");
-    const company = parts[1]; // Company is always the second segment
-    if (!acc[company]) {
-      acc[company] = [];
-    }
-    acc[company].push(layer);
-    return acc;
-  }, {});
+  // Generate layers based on company acronym
+  const generateLayers = () => {
+    if (!companyAcronym) return [];
+    return layerTemplates.map(template => 
+      template.replace('{company}', companyAcronym.toUpperCase())
+    );
+  };
+
+  const layers = generateLayers();
 
   const handleCopy = (text, index) => {
     navigator.clipboard.writeText(text)
@@ -57,49 +56,56 @@ const Domw = () => {
     setIsExpanded(!isExpanded);
   };
 
-  const toggleCompanyExpand = (company) => {
-    setExpandedCompanies(prev => ({
-      ...prev,
-      [company]: !prev[company],
-    }));
+  const handleCompanySubmit = (e) => {
+    e.preventDefault();
+    setCompanyAcronym(inputValue);
+    setInputValue(''); // Clear input after submission
+    if (!isExpanded) setIsExpanded(true); // Auto-expand if not already expanded
   };
 
   return (
     <div className="domw-container">
       <button 
-        className="toggle-button-domw" 
+        className="wtrbtn toggle-button-domw" 
         onClick={toggleExpand}
       >
         {isExpanded ? 'Collapse Domestic Water Layers' : 'Expand Domestic Water Layers'}
       </button>
+      
       {isExpanded && (
-        <ul className="domw-list">
-          {Object.keys(groupedLayers).map(company => (
-            <li key={company} className="company-item">
-              <button
-                className="toggle-button-company"
-                onClick={() => toggleCompanyExpand(company)}
-              >
-                {expandedCompanies[company] ? `Collapse ${company}` : `Expand ${company}`}
-              </button>
-              {expandedCompanies[company] && (
-                <ul className="company-layers">
-                  {groupedLayers[company].map((item, index) => (
-                    <li key={index} className="domw-item">
-                      <span className="domw-content">{item}</span>
-                      <button
-                        onClick={() => handleCopy(item, `${company}-${index}`)}
-                        className="copy-button"
-                      >
-                        {copiedIndex === `${company}-${index}` ? 'Copied!' : 'Copy'}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
-          ))}
-        </ul>
+        <div className="domw-content">
+          <form onSubmit={handleCompanySubmit} className="company-input-form">
+            <input
+              type="text"
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+              placeholder="Company Name"
+              className="company-input"
+            />
+            <button type="submit" className="submit-button">
+              Set Company
+            </button>
+          </form>
+
+          {companyAcronym && (
+            <div>
+              <h3 className='wtrttl'>Layers for {companyAcronym}</h3>
+              <ul className="domw-list">
+                {layers.map((item, index) => (
+                  <li key={index} className="text-light domw-item">
+                    <span className="domw-content">{item}</span>
+                    <button
+                      onClick={() => handleCopy(item, index)}
+                      className="copy-button"
+                    >
+                      {copiedIndex === index ? 'Copied!' : 'Copy'}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
       )}
     </div>
   );

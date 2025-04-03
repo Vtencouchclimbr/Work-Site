@@ -1,34 +1,42 @@
 import { useState } from 'react';
-import './Ngas.css'; // Specific CSS file for this component
+import './Ngas.css';
 
 const Ngas = () => {
-  const [isExpanded, setIsExpanded] = useState(false); // State to toggle main collapse
-  const [expandedCompanies, setExpandedCompanies] = useState({}); // State to toggle company collapse
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [companyAcronym, setCompanyAcronym] = useState('');
+  const [inputValue, setInputValue] = useState('');
   const [copiedIndex, setCopiedIndex] = useState(null);
 
-  const layerNames = [
-    "V-NGAS-PIPE - EGU - .75in - pl - B",
-    "V-NGAS-PIPE - EGU - .75in - pl - D",
-    "V-NGAS-PIPE - EGU - 2in - pl - B",
-    "V-NGAS-PIPE - EGU - 2in - pl - D",
-    "V-NGAS-PIPE - EGU - 3in - pl - B",
-    "V-NGAS-PIPE - EGU - 3in - pl - D",
-    "V-NGAS-PIPE - EGU - 4in - pl - B",
-    "V-NGAS-PIPE - EGU - 4in - pl - D",
-    "V-NGAS-PIPE - EGU - SERVICE - B",
-    "V-NGAS-PIPE - EGU - SERVICE - D",
+  const layerTemplates = [
+    "V-NGAS-PIPE - {company} - .75in - pl - B",
+    "V-NGAS-PIPE - {company} - .75in - pl - D",
+    "V-NGAS-PIPE - {company} - 2in - pl - B",
+    "V-NGAS-PIPE - {company} - 2in - pl - D",
+    "V-NGAS-PIPE - {company} - 3in - pl - B",
+    "V-NGAS-PIPE - {company} - 3in - pl - D",
+    "V-NGAS-PIPE - {company} - 4in - pl - B",
+    "V-NGAS-PIPE - {company} - 4in - pl - D",
+    "V-NGAS-PIPE - {company} - 6in - pl - B", 
+    "V-NGAS-PIPE - {company} - 6in - pl - D", 
+    "V-NGAS-PIPE - {company} - 8in - pl - B", 
+    "V-NGAS-PIPE - {company} - 8in - pl - D", 
+    "V-NGAS-PIPE - {company} - 10in - pl - B",
+    "V-NGAS-PIPE - {company} - 10in - pl - D",
+    "V-NGAS-PIPE - {company} - 12in - pl - B",
+    "V-NGAS-PIPE - {company} - 12in - pl - D",
+    "V-NGAS-PIPE - {company} - SERVICE - B",
+    "V-NGAS-PIPE - {company} - SERVICE - D",
   ];
 
-  // Group layer names by company (second segment)
-  const groupedLayers = layerNames.reduce((acc, layer) => {
-    const parts = layer.split(" - ");
-    const company = parts[1]; // Company is always the second segment
-    if (!acc[company]) {
-      acc[company] = [];
-    }
-    acc[company].push(layer);
-    return acc;
-  }, {});
+  // Generate layers based on company acronym
+  const generateLayers = () => {
+    if (!companyAcronym) return [];
+    return layerTemplates.map(template => 
+      template.replace('{company}', companyAcronym.toUpperCase())
+    );
+  };
+
+  const layers = generateLayers();
 
   const handleCopy = (text, index) => {
     navigator.clipboard.writeText(text)
@@ -45,49 +53,56 @@ const Ngas = () => {
     setIsExpanded(!isExpanded);
   };
 
-  const toggleCompanyExpand = (company) => {
-    setExpandedCompanies(prev => ({
-      ...prev,
-      [company]: !prev[company],
-    }));
+  const handleCompanySubmit = (e) => {
+    e.preventDefault();
+    setCompanyAcronym(inputValue);
+    setInputValue(''); // Clear input after submission
+    if (!isExpanded) setIsExpanded(true); // Auto-expand if not already expanded
   };
 
   return (
     <div className="ngas-container">
       <button 
-        className="toggle-button-ngas" 
+        className="gasbtn toggle-button-ngas" 
         onClick={toggleExpand}
       >
         {isExpanded ? 'Collapse Natural Gas Layers' : 'Expand Natural Gas Layers'}
       </button>
+      
       {isExpanded && (
-        <ul className="ngas-list">
-          {Object.keys(groupedLayers).map(company => (
-            <li key={company} className="company-item">
-              <button
-                className="toggle-button-company"
-                onClick={() => toggleCompanyExpand(company)}
-              >
-                {expandedCompanies[company] ? `Collapse ${company}` : `Expand ${company}`}
-              </button>
-              {expandedCompanies[company] && (
-                <ul className="company-layers">
-                  {groupedLayers[company].map((item, index) => (
-                    <li key={index} className="ngas-item">
-                      <span className="ngas-content">{item}</span>
-                      <button
-                        onClick={() => handleCopy(item, `${company}-${index}`)}
-                        className="copy-button"
-                      >
-                        {copiedIndex === `${company}-${index}` ? 'Copied!' : 'Copy'}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
-          ))}
-        </ul>
+        <div className="ngas-content">
+          <form onSubmit={handleCompanySubmit} className="company-input-form">
+            <input
+              type="text"
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+              placeholder="Company Name"
+              className="company-input"
+            />
+            <button type="submit" className="submit-button">
+              Set Company
+            </button>
+          </form>
+
+          {companyAcronym && (
+            <div>
+              <h3 className='gasttl'>Layers for {companyAcronym}</h3>
+              <ul className="ngas-list">
+                {layers.map((item, index) => (
+                  <li key={index} className="text-light ngas-item">
+                    <span className="ngas-content">{item}</span>
+                    <button
+                      onClick={() => handleCopy(item, index)}
+                      className="copy-button"
+                    >
+                      {copiedIndex === index ? 'Copied!' : 'Copy'}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
       )}
     </div>
   );

@@ -1,67 +1,44 @@
-.domw-container {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 0 20px;
-  }
-  
-  .toggle-button-domw {
-    width: 100%;
-    padding: 10px;
-    background-color: #2196f3; /* Blue for water theme */
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-bottom: 10px;
-    transition: background-color 0.2s;
-  }
-  
-  .toggle-button-domw:hover {
-    background-color: #1976d2;
-  }
-  
-  .toggle-button-domw:active {
-    background-color: #0d47a1;
-  }
-  
-  .domw-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .domw-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px;
-    padding-left: 6px;
-    margin: 5px 0;
-    background-color: #51afe6;
-    border-radius: 4px;
-  }
-  
-  .domw-content {
-    flex-grow: 1;
-    margin-right: 10px;
-    word-break: break-word;
-  }
-  
-  .copy-button {
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-  
-  .copy-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .copy-button:active {
-    background-color: #004085;
-  }
+.company-input-form {
+  margin: 10px 0;
+  display: flex;
+  gap: 10px;
+}
+
+.company-input {
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.domw-content h3 {
+  margin: 10px 0;
+}
+
+.wtrbtn {
+  padding: 5px 10px;
+  background-color: #0d4dc4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.wtrttl {
+  font-size: 30px;
+  margin: 10px 0;
+  color: white;
+}

@@ -1,58 +1,58 @@
 import { useState } from 'react';
-import './Strm.css'; // Specific CSS file for this component
+import './Strm.css';
 
 const Strm = () => {
-  const [isExpanded, setIsExpanded] = useState(false); // State to toggle main collapse
-  const [expandedCompanies, setExpandedCompanies] = useState({}); // State to toggle company collapse
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [companyAcronym, setCompanyAcronym] = useState('');
+  const [inputValue, setInputValue] = useState('');
   const [copiedIndex, setCopiedIndex] = useState(null);
 
-  const layerNames = [
-    "V-STRM-INLT - HCPW - 24in 36in - C",
-    "V-STRM-INLT - HCPW - 36in 72in - C",
-    "V-STRM-INLT - HCPW - 48in - C",
-    "V-STRM-INLT - HCPW - 60in - C",
-    "V-STRM-INLT - HCPW - D",
-    "V-STRM-MAIN-DITCH - HCPW - D",
-    "V-STRM-MAIN-PIPE - HCPW - 6in - PVC - D",
-    "V-STRM-MAIN-PIPE - HCPW - 6in - RCP - C",
-    "V-STRM-MAIN-PIPE - HCPW - 6in - RCP - D",
-    "V-STRM-MAIN-PIPE - HCPW - 8in - RCP - C",
-    "V-STRM-MAIN-PIPE - HCPW - 8in - RCP - D",
-    "V-STRM-MAIN-PIPE - HCPW - 12in - CPP - C",
-    "V-STRM-MAIN-PIPE - HCPW - 12in - PVC - C",
-    "V-STRM-MAIN-PIPE - HCPW - 12in - RCP - C",
-    "V-STRM-MAIN-PIPE - HCPW - 12in - RCP - D",
-    "V-STRM-MAIN-PIPE - HCPW - 14in - RCP - C",
-    "V-STRM-MAIN-PIPE - HCPW - 14in - RCP - D",
-    "V-STRM-MAIN-PIPE - HCPW - 15in - RCP - C",
-    "V-STRM-MAIN-PIPE - HCPW - 18in - RCP - C",
-    "V-STRM-MAIN-PIPE - HCPW - 18in - RCP - D",
-    "V-STRM-MAIN-PIPE - HCPW - 20in - RCP - C",
-    "V-STRM-MAIN-PIPE - HCPW - 20in - RCP - D",
-    "V-STRM-MAIN-PIPE - HCPW - 36in - RCP - D",
-    "V-STRM-MAIN-PIPE - HCPW - 36in - ukn",
-    "V-STRM-MAIN-PIPE - HCPW - 48in - RCP - C",
-    "V-STRM-MAIN-PIPE - HCPW - 48in - RCP - D",
-    "V-STRM-MAIN-PIPE - HCPW - 48in - ukn",
-    "V-STRM-MAIN-PIPE - HCPW - ukn - D",
-    "V-STRM-MAIN-PIPE - HCPW - ukn - RCP - D",
-    "V-STRM-MAIN-PIPE - HCPW - ukn - ukn - D",
-    "V-STRM-MHOL - HCPW - 36in 72in - C",
-    "V-STRM-MHOL - HCPW - 48in - C",
-    "V-STRM-MHOL - HCPW - 60in - C",
-    "V-STRM-MHOL - HCPW - D",
+  const layerTemplates = [
+    "V-STRM-INLT - {company} - 24in 36in - C",
+    "V-STRM-INLT - {company} - 36in 72in - C",
+    "V-STRM-INLT - {company} - 48in - C",
+    "V-STRM-INLT - {company} - 60in - C",
+    "V-STRM-INLT - {company} - ukn - D",
+    "V-STRM-MAIN-DITCH - {company} - D",
+    "V-STRM-MAIN-PIPE - {company} - 6in - PVC - D",
+    "V-STRM-MAIN-PIPE - {company} - 6in - RCP - C",
+    "V-STRM-MAIN-PIPE - {company} - 6in - RCP - D",
+    "V-STRM-MAIN-PIPE - {company} - 8in - RCP - C",
+    "V-STRM-MAIN-PIPE - {company} - 8in - RCP - D",
+    "V-STRM-MAIN-PIPE - {company} - 12in - CPP - C",
+    "V-STRM-MAIN-PIPE - {company} - 12in - PVC - C",
+    "V-STRM-MAIN-PIPE - {company} - 12in - RCP - C",
+    "V-STRM-MAIN-PIPE - {company} - 12in - RCP - D",
+    "V-STRM-MAIN-PIPE - {company} - 14in - RCP - C",
+    "V-STRM-MAIN-PIPE - {company} - 14in - RCP - D",
+    "V-STRM-MAIN-PIPE - {company} - 15in - RCP - C",
+    "V-STRM-MAIN-PIPE - {company} - 18in - RCP - C",
+    "V-STRM-MAIN-PIPE - {company} - 18in - RCP - D",
+    "V-STRM-MAIN-PIPE - {company} - 20in - RCP - C",
+    "V-STRM-MAIN-PIPE - {company} - 20in - RCP - D",
+    "V-STRM-MAIN-PIPE - {company} - 36in - RCP - D",
+    "V-STRM-MAIN-PIPE - {company} - 36in - ukn",
+    "V-STRM-MAIN-PIPE - {company} - 48in - RCP - C",
+    "V-STRM-MAIN-PIPE - {company} - 48in - RCP - D",
+    "V-STRM-MAIN-PIPE - {company} - 48in - ukn",
+    "V-STRM-MAIN-PIPE - {company} - ukn - D",
+    "V-STRM-MAIN-PIPE - {company} - ukn - RCP - D",
+    "V-STRM-MAIN-PIPE - {company} - ukn - ukn - D",
+    "V-STRM-MHOL - {company} - 36in 72in - C",
+    "V-STRM-MHOL - {company} - 48in - C",
+    "V-STRM-MHOL - {company} - 60in - C",
+    "V-STRM-MHOL - {company} - D",
   ];
 
-  // Group layer names by company (second segment)
-  const groupedLayers = layerNames.reduce((acc, layer) => {
-    const parts = layer.split(" - ");
-    const company = parts[1]; // Company is always the second segment
-    if (!acc[company]) {
-      acc[company] = [];
-    }
-    acc[company].push(layer);
-    return acc;
-  }, {});
+  // Generate layers based on company acronym
+  const generateLayers = () => {
+    if (!companyAcronym) return [];
+    return layerTemplates.map(template => 
+      template.replace('{company}', companyAcronym.toUpperCase())
+    );
+  };
+
+  const layers = generateLayers();
 
   const handleCopy = (text, index) => {
     navigator.clipboard.writeText(text)
@@ -69,49 +69,56 @@ const Strm = () => {
     setIsExpanded(!isExpanded);
   };
 
-  const toggleCompanyExpand = (company) => {
-    setExpandedCompanies(prev => ({
-      ...prev,
-      [company]: !prev[company],
-    }));
+  const handleCompanySubmit = (e) => {
+    e.preventDefault();
+    setCompanyAcronym(inputValue);
+    setInputValue(''); // Clear input after submission
+    if (!isExpanded) setIsExpanded(true); // Auto-expand if not already expanded
   };
 
   return (
     <div className="strm-container">
       <button 
-        className="toggle-button-strm" 
+        className="stmbtn toggle-button-strm" 
         onClick={toggleExpand}
       >
         {isExpanded ? 'Collapse Storm Sewer Layers' : 'Expand Storm Sewer Layers'}
       </button>
+      
       {isExpanded && (
-        <ul className="strm-list">
-          {Object.keys(groupedLayers).map(company => (
-            <li key={company} className="company-item">
-              <button
-                className="toggle-button-company"
-                onClick={() => toggleCompanyExpand(company)}
-              >
-                {expandedCompanies[company] ? `Collapse ${company}` : `Expand ${company}`}
-              </button>
-              {expandedCompanies[company] && (
-                <ul className="company-layers">
-                  {groupedLayers[company].map((item, index) => (
-                    <li key={index} className="strm-item">
-                      <span className="strm-content">{item}</span>
-                      <button
-                        onClick={() => handleCopy(item, `${company}-${index}`)}
-                        className="copy-button"
-                      >
-                        {copiedIndex === `${company}-${index}` ? 'Copied!' : 'Copy'}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
-          ))}
-        </ul>
+        <div className="strm-content">
+          <form onSubmit={handleCompanySubmit} className="company-input-form">
+            <input
+              type="text"
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+              placeholder="Company Name"
+              className="company-input"
+            />
+            <button type="submit" className="submit-button">
+              Set Company
+            </button>
+          </form>
+
+          {companyAcronym && (
+            <div>
+              <h3 className='stmttl'>Layers for {companyAcronym}</h3>
+              <ul className="text-light strm-list">
+                {layers.map((item, index) => (
+                  <li key={index} className="strm-item">
+                    <span className="strm-content">{item}</span>
+                    <button
+                      onClick={() => handleCopy(item, index)}
+                      className="copy-button"
+                    >
+                      {copiedIndex === index ? 'Copied!' : 'Copy'}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
       )}
     </div>
   );

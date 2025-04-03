@@ -1,48 +1,48 @@
 import { useState } from 'react';
-import './Irrg.css'; // Specific CSS file for this component
+import './Irrg.css';
 
 const Irrg = () => {
-  const [isExpanded, setIsExpanded] = useState(false); // State to toggle main collapse
-  const [expandedCompanies, setExpandedCompanies] = useState({}); // State to toggle company collapse
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [companyAcronym, setCompanyAcronym] = useState('');
+  const [inputValue, setInputValue] = useState('');
   const [copiedIndex, setCopiedIndex] = useState(null);
 
-  const layerNames = [
-    "V-IRRG-BOX - COH",
-    "V-IRRG-BOX - COH - D",
-    "V-IRRG-MHOL - COH",
-    "V-IRRG-MHOL - COH - D",
-    "V-IRRG-PIPE - COH - 4in - ukn - B",
-    "V-IRRG-PIPE - COH - 4in - ukn - D",
-    "V-IRRG-PIPE - COH - 6in - ukn - B",
-    "V-IRRG-PIPE - COH - 6in - ukn - D",
-    "V-IRRG-PIPE - COH - 8in - ukn - B",
-    "V-IRRG-PIPE - COH - 8in - ukn - D",
-    "V-IRRG-PIPE - COH - 10in - ukn - B",
-    "V-IRRG-PIPE - COH - 10in - ukn - D",
-    "V-IRRG-PIPE - COH - 12in - ukn - B",
-    "V-IRRG-PIPE - COH - 12in - ukn - D",
-    "V-IRRG-PIPE - COH - 14in - ukn - B",
-    "V-IRRG-PIPE - COH - 14in - ukn - D",
-    "V-IRRG-PIPE - COH - 20in - ukn - B",
-    "V-IRRG-PIPE - COH - 20in - ukn - D",
-    "V-IRRG-PIPE - COH - service - ukn - B",
-    "V-IRRG-PIPE - COH - service - ukn - D",
-    "V-IRRG-PIPE - COH - unk - B",
-    "V-IRRG-PIPE - COH - unk - D",
-    "V-IRRG-VALVE - COH",
-    "V-IRRG-VALVE - COH - D"
+  const layerTemplates = [
+    "V-IRRG-BOX - {company} - B",
+    "V-IRRG-BOX - {company} - D",
+    "V-IRRG-MHOL - {company} - B",
+    "V-IRRG-MHOL - {company} - D",
+    "V-IRRG-PIPE - {company} - 4in - pvc - B",
+    "V-IRRG-PIPE - {company} - 4in - pvc - D",
+    "V-IRRG-PIPE - {company} - 6in - pvc - B",
+    "V-IRRG-PIPE - {company} - 6in - pvc - D",
+    "V-IRRG-PIPE - {company} - 8in - pvc - B",
+    "V-IRRG-PIPE - {company} - 8in - pvc - D",
+    "V-IRRG-PIPE - {company} - 10in - pvc - B",
+    "V-IRRG-PIPE - {company} - 10in - pvc - D",
+    "V-IRRG-PIPE - {company} - 12in - pvc - B",
+    "V-IRRG-PIPE - {company} - 12in - pvc - D",
+    "V-IRRG-PIPE - {company} - 14in - pvc - B",
+    "V-IRRG-PIPE - {company} - 14in - pvc - D",
+    "V-IRRG-PIPE - {company} - 20in - pvc - B",
+    "V-IRRG-PIPE - {company} - 20in - pvc - D",
+    "V-IRRG-PIPE - {company} - service - pvc - B",
+    "V-IRRG-PIPE - {company} - service - pvc - D",
+    "V-IRRG-PIPE - {company} - ukn - pvc - B",
+    "V-IRRG-PIPE - {company} - ukn - pvc - D",
+    "V-IRRG-VALVE - {company} - B",
+    "V-IRRG-VALVE - {company} - D",
   ];
 
-  // Group layer names by company (second segment)
-  const groupedLayers = layerNames.reduce((acc, layer) => {
-    const parts = layer.split(" - ");
-    const company = parts[1]; // Company is always the second segment
-    if (!acc[company]) {
-      acc[company] = [];
-    }
-    acc[company].push(layer);
-    return acc;
-  }, {});
+  // Generate layers based on company acronym
+  const generateLayers = () => {
+    if (!companyAcronym) return [];
+    return layerTemplates.map(template => 
+      template.replace('{company}', companyAcronym.toUpperCase())
+    );
+  };
+
+  const layers = generateLayers();
 
   const handleCopy = (text, index) => {
     navigator.clipboard.writeText(text)
@@ -59,49 +59,56 @@ const Irrg = () => {
     setIsExpanded(!isExpanded);
   };
 
-  const toggleCompanyExpand = (company) => {
-    setExpandedCompanies(prev => ({
-      ...prev,
-      [company]: !prev[company],
-    }));
+  const handleCompanySubmit = (e) => {
+    e.preventDefault();
+    setCompanyAcronym(inputValue);
+    setInputValue(''); // Clear input after submission
+    if (!isExpanded) setIsExpanded(true); // Auto-expand if not already expanded
   };
 
   return (
     <div className="irrg-container">
       <button 
-        className="toggle-button-irrg" 
+        className="irrbtn toggle-button-irrg" 
         onClick={toggleExpand}
       >
         {isExpanded ? 'Collapse Irrigation Layers' : 'Expand Irrigation Layers'}
       </button>
+      
       {isExpanded && (
-        <ul className="irrg-list">
-          {Object.keys(groupedLayers).map(company => (
-            <li key={company} className="company-item">
-              <button
-                className="toggle-button-company"
-                onClick={() => toggleCompanyExpand(company)}
-              >
-                {expandedCompanies[company] ? `Collapse ${company}` : `Expand ${company}`}
-              </button>
-              {expandedCompanies[company] && (
-                <ul className="company-layers">
-                  {groupedLayers[company].map((item, index) => (
-                    <li key={index} className="irrg-item">
-                      <span className="irrg-content">{item}</span>
-                      <button
-                        onClick={() => handleCopy(item, `${company}-${index}`)}
-                        className="copy-button"
-                      >
-                        {copiedIndex === `${company}-${index}` ? 'Copied!' : 'Copy'}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
-          ))}
-        </ul>
+        <div className="irrg-content">
+          <form onSubmit={handleCompanySubmit} className="company-input-form">
+            <input
+              type="text"
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+              placeholder="Company Name"
+              className="company-input"
+            />
+            <button type="submit" className="submit-button">
+              Set Company
+            </button>
+          </form>
+
+          {companyAcronym && (
+            <div>
+              <h3 className='comttl'>Layers for {companyAcronym}</h3>
+              <ul className="text-light irrg-list">
+                {layers.map((item, index) => (
+                  <li key={index} className="irrg-item">
+                    <span className="irrg-content">{item}</span>
+                    <button
+                      onClick={() => handleCopy(item, index)}
+                      className="copy-button"
+                    >
+                      {copiedIndex === index ? 'Copied!' : 'Copy'}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
       )}
     </div>
   );
