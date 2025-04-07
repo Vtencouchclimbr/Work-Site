@@ -1,44 +1,44 @@
 import { useState } from 'react';
-import './Sswr.css'; // Specific CSS file for this component
+import './Sswr.css';
 
 const Sswr = () => {
-  const [isExpanded, setIsExpanded] = useState(false); // State to toggle main collapse
-  const [expandedCompanies, setExpandedCompanies] = useState({}); // State to toggle company collapse
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [companyAcronym, setCompanyAcronym] = useState('');
+  const [inputValue, setInputValue] = useState('');
   const [copiedIndex, setCopiedIndex] = useState(null);
 
-  const layerNames = [
-    "V-SSWR-MAIN-PIPE - TSSD - 6in - PVC - C",
-    "V-SSWR-MAIN-PIPE - TSSD - 6in - PVC - D",
-    "V-SSWR-MAIN-PIPE - TSSD - 8in - PVC - C",
-    "V-SSWR-MAIN-PIPE - TSSD - 8in - PVC - D",
-    "V-SSWR-MAIN-PIPE - TSSD - 8in - RCP - C",
-    "V-SSWR-MAIN-PIPE - TSSD - 10in - PVC - C",
-    "V-SSWR-MAIN-PIPE - TSSD - 12in - PVC - C",
-    "V-SSWR-MAIN-PIPE - TSSD - 12in - PVC - D",
-    "V-SSWR-MAIN-PIPE - TSSD - 15in - PVC - C",
-    "V-SSWR-MAIN-PIPE - TSSD - 15in - PVC - D",
-    "V-SSWR-MAIN-PIPE - TSSD - 18in - PVC - C",
-    "V-SSWR-MAIN-PIPE - TSSD - 18in - RCP - C",
-    "V-SSWR-MAIN-PIPE - TSSD - 24in - PVC - C",
-    "V-SSWR-MAIN-PIPE - TSSD - 24in - RCP - C",
-    "V-SSWR-MAIN-PIPE - TSSD - ukn - RCP - D",
-    "V-SSWR-MAIN-PIPE - TSSD - ukn - ukn - D",
-    "V-SSWR-MHOL - TSSD - 36in",
-    "V-SSWR-MHOL - TSSD - 36in - D",
-    "V-SSWR-MHOL - TSSD - 48in",
-    "V-SSWR-MHOL - TSSD - 60in"
+  const layerTemplates = [
+    "V-SSWR-MAIN-PIPE - {company} - 6in - PVC - C",
+    "V-SSWR-MAIN-PIPE - {company} - 6in - PVC - D",
+    "V-SSWR-MAIN-PIPE - {company} - 8in - PVC - C",
+    "V-SSWR-MAIN-PIPE - {company} - 8in - PVC - D",
+    "V-SSWR-MAIN-PIPE - {company} - 8in - RCP - C",
+    "V-SSWR-MAIN-PIPE - {company} - 10in - PVC - C",
+    "V-SSWR-MAIN-PIPE - {company} - 12in - PVC - C",
+    "V-SSWR-MAIN-PIPE - {company} - 12in - PVC - D",
+    "V-SSWR-MAIN-PIPE - {company} - 15in - PVC - C",
+    "V-SSWR-MAIN-PIPE - {company} - 15in - PVC - D",
+    "V-SSWR-MAIN-PIPE - {company} - 18in - PVC - C",
+    "V-SSWR-MAIN-PIPE - {company} - 18in - RCP - C",
+    "V-SSWR-MAIN-PIPE - {company} - 24in - PVC - C",
+    "V-SSWR-MAIN-PIPE - {company} - 24in - RCP - C",
+    "V-SSWR-MAIN-PIPE - {company} - ukn - RCP - D",
+    "V-SSWR-MAIN-PIPE - {company} - ukn - ukn - D",
+    "V-SSWR-MHOL - {company} - 36in",
+    "V-SSWR-MHOL - {company} - 36in - D",
+    "V-SSWR-MHOL - {company} - 48in",
+    "V-SSWR-MHOL - {company} - 60in"
   ];
 
-  // Group layer names by company (second segment)
-  const groupedLayers = layerNames.reduce((acc, layer) => {
-    const parts = layer.split(" - ");
-    const company = parts[1]; // Company is always the second segment
-    if (!acc[company]) {
-      acc[company] = [];
-    }
-    acc[company].push(layer);
-    return acc;
-  }, {});
+  // Generate layers based on company acronym
+  const generateLayers = () => {
+    if (!companyAcronym) return [];
+    return layerTemplates.map(template => 
+      template.replace('{company}', companyAcronym.toUpperCase())
+    );
+  };
+
+  const layers = generateLayers();
 
   const handleCopy = (text, index) => {
     navigator.clipboard.writeText(text)
@@ -55,49 +55,56 @@ const Sswr = () => {
     setIsExpanded(!isExpanded);
   };
 
-  const toggleCompanyExpand = (company) => {
-    setExpandedCompanies(prev => ({
-      ...prev,
-      [company]: !prev[company],
-    }));
+  const handleCompanySubmit = (e) => {
+    e.preventDefault();
+    setCompanyAcronym(inputValue);
+    setInputValue(''); // Clear input after submission
+    if (!isExpanded) setIsExpanded(true); // Auto-expand if not already expanded
   };
 
   return (
     <div className="sswr-container">
       <button 
-        className="toggle-button-sswr" 
+        className="sswrbtn toggle-button-sswr" 
         onClick={toggleExpand}
       >
         {isExpanded ? 'Collapse Sanitary Sewer Layers' : 'Expand Sanitary Sewer Layers'}
       </button>
+      
       {isExpanded && (
-        <ul className="sswr-list">
-          {Object.keys(groupedLayers).map(company => (
-            <li key={company} className="company-item">
-              <button
-                className="toggle-button-company"
-                onClick={() => toggleCompanyExpand(company)}
-              >
-                {expandedCompanies[company] ? `Collapse ${company}` : `Expand ${company}`}
-              </button>
-              {expandedCompanies[company] && (
-                <ul className="company-layers">
-                  {groupedLayers[company].map((item, index) => (
-                    <li key={index} className="sswr-item">
-                      <span className="sswr-content">{item}</span>
-                      <button
-                        onClick={() => handleCopy(item, `${company}-${index}`)}
-                        className="copy-button"
-                      >
-                        {copiedIndex === `${company}-${index}` ? 'Copied!' : 'Copy'}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
-          ))}
-        </ul>
+        <div className="sswr-content">
+          <form onSubmit={handleCompanySubmit} className="company-input-form">
+            <input
+              type="text"
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+              placeholder="Company Name"
+              className="company-input"
+            />
+            <button type="submit" className="submit-button">
+              Set Company
+            </button>
+          </form>
+
+          {companyAcronym && (
+            <div>
+              <h3 className="sswrttl">Layers for {companyAcronym}</h3>
+              <ul className="sswr-list">
+                {layers.map((item, index) => (
+                  <li key={index} className="text-light sswr-item">
+                    <span className="sswr-content">{item}</span>
+                    <button
+                      onClick={() => handleCopy(item, index)}
+                      className="copy-button"
+                    >
+                      {copiedIndex === index ? 'Copied!' : 'Copy'}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
       )}
     </div>
   );

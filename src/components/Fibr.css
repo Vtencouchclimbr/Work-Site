@@ -1,67 +1,45 @@
-.fibr-container {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 0 20px;
-  }
-  
-  .toggle-button-fibr {
-    width: 100%;
-    padding: 10px;
-    background-color: #ff9800; 
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-bottom: 10px;
-    transition: background-color 0.2s;
-  }
-  
-  .toggle-button-fibr:hover {
-    background-color: #f57c00;
-  }
-  
-  .toggle-button-fibr:active {
-    background-color: #e64a19;
-  }
-  
-  .fibr-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .fibr-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px;
-    padding-left: 6px;
-    margin: 5px 0;
-    background-color: #da811c;
-    border-radius: 4px;
-  }
-  
-  .fibr-content {
-    flex-grow: 1;
-    margin-right: 10px;
-    word-break: break-word;
-  }
-  
-  .copy-button {
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-  
-  .copy-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .copy-button:active {
-    background-color: #004085;
-  }
+.company-input-form {
+  margin: 10px 0;
+  display: flex;
+  gap: 10px;
+}
+
+.company-input {
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.fibr-content h3 {
+  margin: 10px 0;
+}
+
+.fibrbtn {
+  padding: 5px 10px;
+  background-color: #e29f0f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.fibrttl {
+  font-size: 30px;
+  margin: 10px 0;
+  color: white;
+}
