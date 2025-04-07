@@ -8,17 +8,32 @@ const Fibr = () => {
   const [copiedIndex, setCopiedIndex] = useState(null);
 
   const layerTemplates = [
-    "V-FIBR-BOX - {company}",
-    "V-FIBR-BOX - {company}",
-    "V-FIBR-OH - {company}",
-    "V-FIBR-OH - {company} - 48ct - C",
-    "V-FIBR-OH - {company} - D",
-    "V-FIBR-OH - {company}",
-    "V-FIBR-OH - {company} - D",
-    "V-FIBR-POLE - {company}",
-    "V-FIBR-UGND - {company} - 48ct - C",
-    "V-FIBR-UGND - {company}",
-    "V-FIBR-UGND - {company} - D"
+    "V-FIBR-POLE - {company} - B",
+    "V-FIBR-POLE - {company} - D",
+    "V-FIBR-BOX - {company} - B",
+    "V-FIBR-BOX - {company} - D",
+    "V-FIBR-OVHD - {company} - C",
+    "V-FIBR-OVHD - {company} - D",
+    "V-FIBR-OVHD - {company} - ukn ct - C",
+    "V-FIBR-OVHD - {company} - ukn ct - D",
+    "V-FIBR-UGND - {company} - 6ct - B",
+    "V-FIBR-UGND - {company} - 6ct - D",
+    "V-FIBR-UGND - {company} - 24ct - B",
+    "V-FIBR-UGND - {company} - 24ct - D",
+    "V-FIBR-UGND - {company} - 48ct - B",
+    "V-FIBR-UGND - {company} - 48ct - D",
+    "V-FIBR-UGND - {company} - 72ct - B",
+    "V-FIBR-UGND - {company} - 72ct - D",
+    "V-FIBR-UGND - {company} - 96ct - B",
+    "V-FIBR-UGND - {company} - 96ct - D",
+    "V-FIBR-UGND - {company} - 144ct - B",
+    "V-FIBR-UGND - {company} - 144ct - D",
+    "V-FIBR-UGND - {company} - 576ct - B",
+    "V-FIBR-UGND - {company} - 576ct - D",
+    "V-FIBR-UGND - {company} - ukn ct - B",
+    "V-FIBR-UGND - {company} - ukn ct - D",
+    "V-FIBR-UGND - {company} - B",
+    "V-FIBR-UGND - {company} - D",
   ];
 
   // Generate layers based on company acronym

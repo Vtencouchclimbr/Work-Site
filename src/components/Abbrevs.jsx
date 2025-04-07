@@ -193,7 +193,7 @@ const Abbrevs = () => {
       <select
         value={selectedEntity}
         onChange={handleChange}
-        style={{ width: '300px', padding: '5px', backgroundColor:'rgb(128, 56, 56)' }}
+        style={{ width: '300px', padding: '5px', color:'white', backgroundColor:'rgb(25, 112, 211)' }}
       >
         <option value="" disabled>
           -- Select an Entity --
